@@ -6,4 +6,9 @@ function setup() {
 }
 function draw() {
     background(grid);
+    // snowcreature legs
+    fill("#e8e8e8");
+    strokeWeight(10);
+    stroke("#335379");
+    ellipse(500, 600, 300);
 }
