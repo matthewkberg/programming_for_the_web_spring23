@@ -8,10 +8,56 @@ function setup() {
 }
 function draw() {
     background(grid);
+    // hill 1
+    fill("#718e8b");
+    stroke("#9caf88");
+    ellipse(300, 600, 750, 400);
+    // hill 2
+    fill("#8fc9a3");
+    stroke("#718e8b");
+    ellipse(800, 600, 1000, 400);
     // grass
     fill("#9caf88");
     stroke("#718e8b");
     ellipse(500, 800, 1150, 400);
+    // mini snowcreature 1 base
+    fill("#e8e8e8");
+    strokeWeight(5);
+    stroke("#335379");
+    ellipse(200, 500, 100);
+    // mini snowcreature 1 body
+    ellipse(200, 450, 65);
+    //mini snowcreature 1 head
+    ellipse(200, 400, 50);
+    // mini snowcreature 1 eyes
+    stroke(0);
+    strokeWeight(10);
+    point(200, 400);
+    point(220, 400);
+    // mini snowcreature 1 mouth
+    noFill();
+    stroke(stroke2);
+    strokeWeight(5);
+    arc(210, 410, 10, 10, 0, 2.63, HALF_PI);
+    // mini snowcreature 2 base
+    fill("#e8e8e8");
+    strokeWeight(5);
+    stroke("#335379");
+    ellipse(800, 500, 100);
+    // mini snowcreature 2 body
+    ellipse(800, 450, 65);
+    //mini snowcreature 2 head
+    ellipse(800, 400, 50);
+    // mini snowcreature 2 eyes
+    stroke(0);
+    strokeWeight(10);
+    point(780, 400);
+    point(800, 400);
+    // mini snowcreature 2 mouth
+    noFill();
+    stroke(stroke2);
+    strokeWeight(5);
+    arc(790, 410, 10, 10, 0, 2.63, HALF_PI);
     // snowcreature base
     fill("#e8e8e8");
     strokeWeight(10);
