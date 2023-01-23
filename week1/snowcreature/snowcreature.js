@@ -7,7 +7,7 @@ function setup() {
     grid = loadImage("imgs/100px_grid.png")
 }
 function draw() {
-    background(grid);
+    // background(grid);
     // hill 1
     fill("#718e8b");
     stroke("#9caf88");
