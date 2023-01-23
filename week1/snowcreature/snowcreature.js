@@ -16,12 +16,12 @@ function draw() {
     //snowcreature head
     ellipse(500, 275, 150);
     // hat brim
-    stroke("#e0d09d");
+    stroke("#b68873");
     strokeWeight(30);
     line(400, 225, 600, 225);
     // hat body
-    fill("#e0d09d");
-    quad(415, 150, 595, 150, 575, 200, 435, 200);
+    fill("#b68873");
+    quad(425, 125, 575, 150, 545, 200, 450, 200);
     // eyes
     stroke(0);
     strokeWeight(40);
