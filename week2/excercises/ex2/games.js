@@ -25,3 +25,7 @@ const myFavGameThree = {
     shortDescription: 'Join Mario and his new ally Cappy on a massive, globe-trotting 3D adventure to stop Bowser from forcing Princess Peach to marry him.'
 }
 console.log("Super Mario Odyssey details", myFavGameThree);
+
+//Prompt user to select a number
+const userNumber = window.prompt("I have 3 games in my collection. Pick a number between 1 and 3, and I'll tell you about that game.");
+console.log("Users number", userNumber);
