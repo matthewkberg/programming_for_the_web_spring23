@@ -1,0 +1,23 @@
+{
+  "name": "programming_for_the_web_spring23",
+  "version": "1.0.0",
+  "description": "This here be a READ ME file, lolz.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewkberg/programming_for_the_web_spring23.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthewkberg/programming_for_the_web_spring23/issues"
+  },
+  "homepage": "https://github.com/matthewkberg/programming_for_the_web_spring23#readme",
+  "devDependencies": {
+    "eslint": "^8.34.0"
+  }
+}
