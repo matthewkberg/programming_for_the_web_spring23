@@ -3,7 +3,7 @@ const myFavGameOne = {
     title: 'Stardew Valley', 
     type: 'Indie RPG', 
     numberOfPlayers: 'Single Players', 
-    rating: 'E for Everyone', 
+    rating: "E for Everyone", 
     shortDescription: 'Stardew Valley is a simulation role-playing game where players take the role of a character who inherits a dilapidated farm in a place known as Stardew Valley.'
 };
 console.log("Stardew Valley details", myFavGameOne);
@@ -31,14 +31,14 @@ const userNumber = window.prompt("I have 3 games in my collection. Pick a number
 console.log("Users number", userNumber);
 
 // Concat alert with user selection
-if (userNumber === 1){
-    window.alert("You selected" + myFavGameOne.title + " which is a " + myFavGameOne.type + " for " + myFavGameOne.numberOfPlayers + " and is rated " + myFavGameOne.rating + ". " + myFavGameOne.shortDescription)
+if (userNumber === "1"){
+    window.alert("You selected " + myFavGameOne.title + " which is a " + myFavGameOne.type + " for " + myFavGameOne.numberOfPlayers + " and is rated " + myFavGameOne.rating + ". " + myFavGameOne.shortDescription)
 };
 
-if (userNumber === 2){
-    window.alert("You selected" + myFavGameTwo.title + " which is a " + myFavGameTwo.type + " for " + myFavGameTwo.numberOfPlayers + " and is rated " + myFavGameTwo.rating + ". " + myFavGameTwo.shortDescription)
+if (userNumber === "2"){
+    window.alert("You selected " + myFavGameTwo.title + " which is a " + myFavGameTwo.type + " for " + myFavGameTwo.numberOfPlayers + " and is rated " + myFavGameTwo.rating + ". " + myFavGameTwo.shortDescription)
 };
 
-if (userNumber === 3){
-    window.alert("You selected" + myFavGameThree.title + " which is a " + myFavGameThree.type + " for " + myFavGameThree.numberOfPlayers + " and is rated " + myFavGameThree.rating + ". " + myFavGameOne.shortDescription)
+if (userNumber === "3"){
+    window.alert("You selected " + myFavGameThree.title + " which is a " + myFavGameThree.type + " for " + myFavGameThree.numberOfPlayers + " and is rated " + myFavGameThree.rating + ". " + myFavGameThree.shortDescription)
 };
