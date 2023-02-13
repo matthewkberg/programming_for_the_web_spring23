@@ -23,6 +23,11 @@ function createTile() {
     circle(100, 100, 50);
     circle(100, 100, 150);
     circle(100, 100, 250);
+    stroke('green')
+    strokeWeight(10);
+    circle(100, 100, 20);
+    circle(100, 100, 100);
+    circle(100, 100, 200);
 
 }
 
