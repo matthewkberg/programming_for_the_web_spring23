@@ -9,6 +9,11 @@ function draw() {
     background(155);
     drawShape();
     rectX++; // moves box across the canvas on the x axis
+    if (rectX > width) {
+        noLoop();
+        text('Your score was ' + clickCount, 100, 300);
+        
+    }
 }
 
 function mousePressed() {
@@ -16,6 +21,7 @@ function mousePressed() {
         clickCount++;
         console.log('hit', clickCount);
     }
+    
 }
 
 function drawShape() {
