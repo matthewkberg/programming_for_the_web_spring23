@@ -17,6 +17,12 @@ function createTile() {
     circle(142, 140, 20);
     circle(130, 48, 20);
     circle(70, 153, 20);
+    noFill();
+    stroke('orange');
+    strokeWeight(5);
+    circle(100, 100, 50);
+    circle(100, 100, 150);
+    circle(100, 100, 250);
 
 }
 
