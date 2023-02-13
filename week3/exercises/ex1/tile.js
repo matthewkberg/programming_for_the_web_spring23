@@ -6,6 +6,12 @@ function createTile() {
     translate(0, 0);
     fill('blue');
     rect(0, 0, 200, 200);
+    noFill();
+    stroke('green');
+    strokeWeight(5);
+    circle(100, 100, 20);
+    circle(100, 100, 100);
+    circle(100, 100, 200);
     noStroke();
     fill('yellow');
     triangle(30, 75, 58, 20, 86, 75);
@@ -19,15 +25,11 @@ function createTile() {
     circle(70, 153, 20);
     noFill();
     stroke('orange');
-    strokeWeight(5);
+    strokeWeight(2);
     circle(100, 100, 50);
     circle(100, 100, 150);
     circle(100, 100, 250);
-    stroke('green')
-    strokeWeight(10);
-    circle(100, 100, 20);
-    circle(100, 100, 100);
-    circle(100, 100, 200);
+
 
 }
 
