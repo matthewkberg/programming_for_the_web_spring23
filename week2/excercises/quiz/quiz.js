@@ -14,4 +14,7 @@ console.log(quizArrayLength);
 
 // Random question prompt selection
 const questionIndex = Math.floor(Math.random() * quizArrayLength);
-window.prompt(quizArray[questionIndex].question)
+const answer = window.prompt(quizArray[questionIndex].question);
+
+// Answer alert display
+window.alert("You answered " + answer + ". The correct answer was " + quizArray[questionIndex].answer);
