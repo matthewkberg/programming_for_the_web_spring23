@@ -8,7 +8,7 @@ function draw() {
 }
 
 function mousePressed() {
-    if(mouseX >= 0 && mouseX <= 75) {
+    if((mouseX >= 0 && mouseX <= 75) && (mouseY >= 0 && mouseY <= 75)) {
         console.log('hit');
     }
 }
