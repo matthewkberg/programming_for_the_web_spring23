@@ -15,6 +15,8 @@ function createTile() {
     fill('pink');
     circle(58, 60, 20);
     circle(142, 140, 20);
+    circle(130, 48, 20);
+    circle(70, 153, 20);
 
 }
 
