@@ -5,3 +5,4 @@ const myEmptyDiv = document.querySelector("#myEmptyDiv");
 // Create a new element
 const heading = document.createElement('h1');
 heading.innerHTML = 'Hello world! This is a manipulation';
+myEmptyDiv.appendChild(heading);
