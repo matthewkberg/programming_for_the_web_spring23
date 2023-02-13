@@ -1,8 +1,8 @@
 function setup() {
     createCanvas(600, 600)
 }
-function createTile() {
-    translate(0, 0);
+function createTile(originX, originY) {
+    translate(originX, originY);
     fill('#1b3858');
     rect(0, 0, 200, 200);
     noFill();
@@ -27,7 +27,10 @@ function createTile() {
     strokeWeight(2);
     circle(100, 100, 50);
     circle(100, 100, 150);
-    circle(100, 100, 250);
+    circle(100, 100, 175);
 
-
+}
+function draw() {
+    createTile(0, 0);
+    createTile(0, 200);
 }
