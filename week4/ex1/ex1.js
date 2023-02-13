@@ -1,5 +1,5 @@
 // Select empty div and assign to a variable
-const myEmptyDiv = document.querySelector("#myEmptyDiv");
+const myEmptyDiv = document.querySelector('#myEmptyDiv');
 
 // Put an h1 inside of it
 // Create a new element
@@ -9,6 +9,5 @@ heading.style.cursor = 'pointer';
 heading.addEventListener('click', handleHeadingClick);
 myEmptyDiv.appendChild(heading);
 function handleHeadingClick(){
-    console.log('Heading has been clicked');
     document.body.style.backgroundColor = 'magenta';
 }
