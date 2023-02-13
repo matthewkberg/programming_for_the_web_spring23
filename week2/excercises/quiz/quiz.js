@@ -6,3 +6,8 @@ const quizArray = [
     {question: "Who is the only queen to be eliminated from RuPaul's Drag Race for breaking the rules?" , answer: "Willam"}
 
 ]
+console.log(quizArray)
+
+// Length of the question set
+const quizArrayLength = quizArray.length;
+console.log(quizArrayLength)
