@@ -1,19 +1,21 @@
+let rectX = 0;
 function setup() {
     createCanvas(500, 500); 
 }
 
 function draw() {
     background(155);
-    drawShape();  
+    drawShape();
+    rectX += 2;
 }
 
 function mousePressed() {
-    if((mouseX >= 0 && mouseX <= 75) && (mouseY >= 0 && mouseY <= 75)) {
+    if((mouseX >= rectX && mouseX <= 75) && (mouseY >= 0 && mouseY <= 75)) {
         console.log('hit');
     }
 }
 
 function drawShape() {
     fill('purple');
-    rect(0, 0, 75, 75);
+    rect(rectX, 0, 75, 75);
 }
