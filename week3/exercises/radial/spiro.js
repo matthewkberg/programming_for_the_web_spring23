@@ -9,8 +9,14 @@ function makeArm(rotateBy) {
     console.log(alt);
     noFill();
     stroke('white');
-    strokeWeight(2);
-    ellipse(150, 150 + alt, 150 - alt);
+    strokeWeight(1);
+    ellipse(150, 150 / alt, 150 - alt);
+    stroke('magenta');
+    strokeWeight(3);
+    triangle(alt + 30, alt * 75, 58, 20, 86, 75);
+    stroke('aqua');
+    strokeWeight(1);
+    square(30, 20, 20 * alt);
 }
 
 function draw() {
