@@ -4,6 +4,7 @@ function setup() {
 function createTile(originX, originY, tileColor, strokeColor1, strokeColor2, triangleColor, dotColor) {
     translate(originX, originY);
     fill(tileColor);
+    noStroke();
     rect(0, 0, 200, 200);
     // Circles
     noFill();
@@ -34,9 +35,12 @@ function createTile(originX, originY, tileColor, strokeColor1, strokeColor2, tri
 }
 function draw() {
     createTile(0, 0, '#1b3858', '#d9dbec', '#1d1b58', '#581b38', '#5f738a');
-    createTile(0, 200);
-    createTile(0, 200);
-    createTile(200, -400);
-    createTile(0, 200);
-    createTile()
+    createTile(0, 200, '#1b3858', '#d9dbec', '#1d1b58', '#581b38', '#5f738a');
+    createTile(0, 200, '#1b3858', '#d9dbec', '#1d1b58', '#581b38', '#5f738a');
+    createTile(200, -400, '#1b3858', '#d9dbec', '#1d1b58', '#581b38', '#5f738a');
+    createTile(0, 200, '#1b3858', '#d9dbec', '#1d1b58', '#581b38', '#5f738a');
+    createTile(0, 200, '#1b3858', '#d9dbec', '#1d1b58', '#581b38', '#5f738a');
+    createTile(200, -400, '#1b3858', '#d9dbec', '#1d1b58', '#581b38', '#5f738a');
+    createTile(0, 200, '#1b3858', '#d9dbec', '#1d1b58', '#581b38', '#5f738a');
+    createTile(0, 200, '#1b3858', '#d9dbec', '#1d1b58', '#581b38', '#5f738a');
 }
