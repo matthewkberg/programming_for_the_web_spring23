@@ -10,4 +10,8 @@ console.log(quizArray)
 
 // Length of the question set
 const quizArrayLength = quizArray.length;
-console.log(quizArrayLength)
+console.log(quizArrayLength);
+
+// Random question prompt selection
+const questionIndex = Math.floor(Math.random() * quizArrayLength);
+window.prompt(quizArray[questionIndex].question)
