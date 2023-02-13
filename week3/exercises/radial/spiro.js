@@ -5,7 +5,8 @@ function setup() {
     angleMode(DEGREES)
 }
 function makeArm(rotateBy) {
-    let alt = Math.round(rotateBy / 360);
+    let alt = Math.round(rotateBy / 360); // adjust the rotation
+    console.log(alt);
     noFill();
     stroke('white');
     strokeWeight(2);
@@ -17,4 +18,7 @@ function draw() {
     rotate(rotateBy); // rotates canvas
     makeArm(rotateBy);
     rotateBy += 8;
+}
+function mousePressed() {
+    noLoop();
 }
