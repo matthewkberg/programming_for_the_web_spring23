@@ -11,6 +11,11 @@ function createTile(originX, originY) {
     circle(100, 100, 20);
     circle(100, 100, 100);
     circle(100, 100, 200);
+    stroke('#1d1b58');
+    strokeWeight(2);
+    circle(100, 100, 50);
+    circle(100, 100, 150);
+    circle(100, 100, 175);
     noStroke();
     fill('#581b38');
     triangle(30, 75, 58, 20, 86, 75);
@@ -22,12 +27,6 @@ function createTile(originX, originY) {
     circle(142, 140, 20);
     circle(130, 48, 20);
     circle(70, 153, 20);
-    noFill();
-    stroke('#1d1b58');
-    strokeWeight(2);
-    circle(100, 100, 50);
-    circle(100, 100, 150);
-    circle(100, 100, 175);
 
 }
 function draw() {
