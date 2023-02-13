@@ -4,17 +4,17 @@ function setup() {
     background(0);
     angleMode(DEGREES)
 }
-function makeArm() {
+function makeArm(rotateBy) {
+    let alt = Math.round(rotateBy / 360);
     noFill();
     stroke('white');
     strokeWeight(2);
-    ellipse(150, 150, 150);
+    ellipse(150, 150 + alt, 150 - alt);
 }
 
 function draw() {
     translate(300, 300);
     rotate(rotateBy); // rotates canvas
-    makeArm();
+    makeArm(rotateBy);
     rotateBy += 8;
-
 }
