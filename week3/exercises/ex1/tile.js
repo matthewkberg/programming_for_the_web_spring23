@@ -10,6 +10,9 @@ function createTile() {
     fill('yellow');
     triangle(30, 75, 58, 20, 86, 75);
     triangle(170, 125, 142, 180, 114, 125);
+    fill('pink');
+    circle(58, 60, 20);
+    circle(142, 140, 20);
 
 }
 
