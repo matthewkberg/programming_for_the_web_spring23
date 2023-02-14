@@ -7,7 +7,7 @@ function setup() {
     background('#361d2e');
     for (let i = 0; i < 5; i++) {
         rect(startingX, startingY, 100, 150, 20);
-        myRects.push({ x: startingX, y: startingY });
+        myRects.push({ x: startingX, y: startingY, id: i });
         startingX += 150;
     }
     console.log(myRects);
