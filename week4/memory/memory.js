@@ -1,3 +1,5 @@
+let startingX = 100
+let startingY = 100
 
 
 function setup() {
@@ -6,5 +8,5 @@ function setup() {
 }
 
 function draw() {
-    rect(100, 100, 100, 150, 20);
+    rect(startingX, startingY, 100, 150, 20);
 }
