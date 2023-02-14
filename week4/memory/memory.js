@@ -3,7 +3,7 @@ let startingY = 100;
 let myRects =[];
 // Canvas
 function setup() {
-    createCanvas(1000, 1000);
+    createCanvas(1200, 1000);
     background('#361d2e');
     for (let k = 0; k < 4; k++) {
             for (let i = 0; i < 5; i++) {
