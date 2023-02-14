@@ -1,8 +1,11 @@
 let rectX = 0;
+let rectY;
 const rectWidth = 75;
+const rectHeight = 75;
 let clickCount = 0;
 function setup() {
-    createCanvas(500, 500); 
+    createCanvas(500, 500);
+    rectY = random(height - rectHeight); 
 }
 
 function draw() {
@@ -17,7 +20,7 @@ function draw() {
 }
 
 function mousePressed() {
-    if((mouseX >= rectX && mouseX <= rectX + rectWidth) && (mouseY >= 0 && mouseY <= 75)) {
+    if((mouseX >= rectX && mouseX <= rectX + rectWidth) && (mouseY >= rectY && mouseY <= rectY + rectHeight)) {
         clickCount++;
         console.log('hit', clickCount);
     }
@@ -26,5 +29,5 @@ function mousePressed() {
 
 function drawShape() {
     fill('purple');
-    rect(rectX, 0, rectWidth, 75);
+    rect(rectX, rectY, rectWidth, rectHeight);
 }
