@@ -19,6 +19,12 @@ function drawBlock(x, y, color) {
 }
 
 drawTimer = window.setInterval(() => {
-    drawBlock(blockX, blockY, 255);
-    blockY += distance;
+    if(blockY - 50 <= height) {
+        drawBlock(blockX, blockY, 255);
+        blockY += distance;
+    } else {
+        blockY = 0;
+        blockX += 50;
+    }
+
 }, speed);
