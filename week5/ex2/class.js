@@ -1,18 +1,28 @@
-let bubble1;
-let bubble2;
+// let bubble1;
+// let bubble2;
+let bubble = [];
 
 function setup() {
     createCanvas(600, 400);
-    bubble1 = new Bubble();
-    bubble2 = new Bubble();
+    for (let i = 0; i < 500; i++) {
+        bubble[i] = new Bubble();
+        
+    }
+    // bubble1 = new Bubble();
+    // bubble2 = new Bubble();
 }
 
 function draw() {
     background(0);
-    bubble1.move();
-    bubble1.show();
-    bubble2.move();
-    bubble2.show();
+    for (let i = 0; i < bubble.length; i++) {
+        bubble[i].move();
+        bubble[i].show();
+       
+    }
+    // bubble1.move();
+    // bubble1.show();
+    // bubble2.move();
+    // bubble2.show();
 }
 
 class Bubble {              // defines the template
