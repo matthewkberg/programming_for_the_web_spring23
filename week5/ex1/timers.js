@@ -1,6 +1,7 @@
 // Variables for parameters
 let blockX = 0;
 let blockY = 0;
+let blockColor = 255;
 let drawTimer;
 const speed = 20; // milliseconds
 const distance = 2;
@@ -20,13 +21,19 @@ function drawBlock(x, y, color) {
 
 function keyTyped() {
     let keyToNumber = Number(key);
-    console.log('key to number', keyToNumber);
+    if (isNaN(keyToNumber)){
+        return;
+    }
+    keyToNumber = map(keyToNumber, 1, 9, 1, 255);
+    console.log('converted number', keyToNumber);
+    blockColor = keyToNumber;
+    
 }
 
 // setInterval to draw blocks and conditions for starting new columns
 drawTimer = window.setInterval(() => {
     if(blockY - 50 <= height) {
-        drawBlock(blockX, blockY, 255);
+        drawBlock(blockX, blockY, blockColor);
         blockY += distance;
     } else {
         blockY = 0;
