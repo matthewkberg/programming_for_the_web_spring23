@@ -19,8 +19,8 @@ function drawBlock(x, y, color) {
 }
 
 function keyTyped() {
-    console.log('you pressed', key);
-    
+    let keyToNumber = Number(key);
+    console.log('key to number', keyToNumber);
 }
 
 // setInterval to draw blocks and conditions for starting new columns
