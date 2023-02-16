@@ -18,6 +18,11 @@ function drawBlock(x, y, color) {
     rect(x, y, 50, 50);
 }
 
+function keyTyped() {
+    console.log('you pressed', key);
+    
+}
+
 // setInterval to draw blocks and conditions for starting new columns
 drawTimer = window.setInterval(() => {
     if(blockY - 50 <= height) {
