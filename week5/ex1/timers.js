@@ -18,7 +18,7 @@ function drawBlock(x, y, color) {
     rect(x, y, 50, 50);
 }
 
-// 
+// setInterval to draw blocks and conditions for starting new columns
 drawTimer = window.setInterval(() => {
     if(blockY - 50 <= height) {
         drawBlock(blockX, blockY, 255);
@@ -26,6 +26,10 @@ drawTimer = window.setInterval(() => {
     } else {
         blockY = 0;
         blockX += 50;
+    }
+    if(blockY - 50 > height && blockX - 50 > width){
+        window.clearInterval(drawTimer);
+        alert('done!');
     }
 
 }, speed);
