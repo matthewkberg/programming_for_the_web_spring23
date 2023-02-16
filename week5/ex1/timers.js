@@ -2,7 +2,7 @@
 let blockX = 0;
 let blockY = 0;
 let drawTimer;
-const speed = 50; // milliseconds
+const speed = 20; // milliseconds
 const distance = 2;
 
 // Canvas and background
@@ -18,6 +18,7 @@ function drawBlock(x, y, color) {
     rect(x, y, 50, 50);
 }
 
+// 
 drawTimer = window.setInterval(() => {
     if(blockY - 50 <= height) {
         drawBlock(blockX, blockY, 255);
