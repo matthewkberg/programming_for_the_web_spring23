@@ -1,30 +1,36 @@
-let bubble;
+let bubble1;
+let bubble2;
 
 
 function setup() {
     createCanvas(600, 400);
-    bubble = new Bubble();
-    print(bubble.x, bubble.y);
+    bubble1 = new Bubble();
+    bubble2 = new Bubble();
+    // print(bubble.x, bubble.y);
 }
 
 function draw() {
     background(0);
-    // move();
-    // display();
+    bubble1.move();
+    bubble1.show();
+    bubble2.move();
+    bubble2.show();
 }
 
-class Bubble {
-    constructor() {
+class Bubble {              // defines the template
+    constructor() {         // defines how the object is initialized
         this.x = 200;
         this.y = 150;
     }
     
+    // functionality of the object
+
     move() {
         this.x = this.x + random(-5, 5);
         this.y = this.y + random(-5, 5);
     }
 
-    display() {
+    show() {
         stroke(255);
         strokeWeight(1);
         noFill();
