@@ -5,8 +5,8 @@ function setup() {
     drawBlock();
 }
 
-// Setup fucntion to draw square
-function drawBlock() {
-    fill(255);
+// Set up function to draw square
+function drawBlock(x, y, color) {
+    fill(color || 255);
     rect(0, 0, 50, 50);
 }
