@@ -1,12 +1,10 @@
 let bubble1;
 let bubble2;
 
-
 function setup() {
     createCanvas(600, 400);
     bubble1 = new Bubble();
     bubble2 = new Bubble();
-    // print(bubble.x, bubble.y);
 }
 
 function draw() {
@@ -38,16 +36,3 @@ class Bubble {              // defines the template
     }
 
 }
-
-// function display() {
-//     stroke(255);
-//     strokeWeight(1);
-//     noFill();
-//     ellipse(bubble.x, bubble.y, 24, 24);
-// }
-
-// function move() {
-//     bubble.x = bubble.x + random(-5, 5);
-//     bubble.y = bubble.y + random(-5, 5);
-    
-// }
