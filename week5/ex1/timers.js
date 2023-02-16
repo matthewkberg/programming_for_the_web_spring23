@@ -3,7 +3,7 @@ let blockX = 0;
 let blockY = 0;
 let blockColor = 255;
 let drawTimer;
-const speed = 20; // milliseconds
+const speed = 5; // milliseconds
 const distance = 2;
 
 // Canvas and background
@@ -19,6 +19,7 @@ function drawBlock(x, y, color) {
     rect(x, y, 50, 50);
 }
 
+// Mapping number keys to grey scale
 function keyTyped() {
     let keyToNumber = Number(key);
     if (isNaN(keyToNumber)){
