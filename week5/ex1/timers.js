@@ -2,6 +2,7 @@
 let blockX = 0;
 let blockY = 0;
 let drawTimer;
+let speed = 50; // milliseconds
 
 // Canvas and background
 function setup() {
@@ -18,4 +19,4 @@ function drawBlock(x, y, color) {
 
 drawTimer = window.setInterval(() => {
     drawBlock(blockX, blockY, 255);
-}, 1000);
+}, speed);
