@@ -105,4 +105,19 @@ class Card {
         }
         this.show();
     }
+
+    function shuffleArray (array) {
+        let counter = array.length;
+        while (counter > 0) {
+            // Pick random index
+            const idx = Math.floor(Math.random() * counter);
+            // Decrease counter by 1 (decrement)
+            counter--;
+            // Swap tje last element with it
+            const temp = array[counter];
+            array[counter] = array[idx];
+            array[idx] = temp;
+        }
+        return array;
+    }
 }
