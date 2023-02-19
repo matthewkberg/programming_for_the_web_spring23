@@ -7,6 +7,10 @@ let cards = []; // Array for my cards
 const gameState = {
 
 };
+let cardBack;
+function preload() {
+    cardBack = loadImage('imgs/cardBack.png');
+}
 
 function setup() {
     createCanvas(1200, 1000);
@@ -49,6 +53,7 @@ class Card {
         if (this.face === DOWN) {
             fill('#86a397')
             rect(this.x, this.y, this.width, this.height, 10);
+            image(cardBack, this.x, this.y, 100, 150);
         } else {
             fill('#e1b07e')
             rect(this.x, this.y, this.width, this.height, 10);
