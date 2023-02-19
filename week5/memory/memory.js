@@ -28,9 +28,20 @@ function preload() {
 function setup() {
     createCanvas(1600, 1600);
     background('#361d2e');
+    let selectedFaces = [];
+    for (let z = 0; z < 10; z++) {
+        const randomIdx = floor(random(cardfaceArray.length));
+        const face = cardfaceArray[randomIdx];
+        // pushes the same cardface twice to make a matching set
+        selectedFaces.push(face);
+        selectedFaces.push(face);
+        // remove the used cardface so it doesn't get selected again
+        cardfaceArray.splice(randomIdx, 1); 
+    }
     for (let j = 0; j < 4; j++) { // Loop for new rows
         for (let i = 0; i < 5; i++) { // Loop for initial row
-            cards.push(new Card(startingX, startingY, cardfaceArray[0])); // New instance
+            const faceImage = selectedFaces.pop();
+            cards.push(new Card(startingX, startingY, faceImage)); // New instance
             startingX += 250;
         }
        startingY += 350;
