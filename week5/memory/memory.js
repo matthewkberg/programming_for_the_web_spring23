@@ -60,9 +60,9 @@ function setup() {
 function draw() {
     background('#361d2e');
     if (gameState.numMatched === gameState.totalPairs) {
-        fill('yellow');
-        textSize(66);
-        text('You are a winner baby!', 500, 550)
+        fill('#e1b07e');
+        textSize(32);
+        text('You are a winner baby!', 1400, 550)
         noLoop();
     }
     for (let l = 0; l < cards.length; l++) {
@@ -74,7 +74,7 @@ function draw() {
     noLoop();
     gameState.flippedCards.length = 0;
     gameState.waiting = false;
-    fill(255);
+    fill('#e5be9e');
     textSize(48);
     text('Attempts: ' + gameState.attempts, 1400, 400);
     text('Matches: ' + gameState.numMatched, 1400, 500);
