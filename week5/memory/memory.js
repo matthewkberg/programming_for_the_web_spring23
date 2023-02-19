@@ -38,6 +38,7 @@ function setup() {
         // remove the used cardface so it doesn't get selected again
         cardfaceArray.splice(randomIdx, 1); 
     }
+    selectedFaces = shuffleArray(selectedFaces);
     for (let j = 0; j < 4; j++) { // Loop for new rows
         for (let i = 0; i < 5; i++) { // Loop for initial row
             const faceImage = selectedFaces.pop();
@@ -106,18 +107,19 @@ class Card {
         this.show();
     }
 
-    function shuffleArray (array) {
-        let counter = array.length;
-        while (counter > 0) {
-            // Pick random index
-            const idx = Math.floor(Math.random() * counter);
-            // Decrease counter by 1 (decrement)
-            counter--;
-            // Swap tje last element with it
-            const temp = array[counter];
-            array[counter] = array[idx];
-            array[idx] = temp;
-        }
-        return array;
+}
+
+function shuffleArray (array) {
+    let counter = array.length;
+    while (counter > 0) {
+        // Pick random index
+        const idx = Math.floor(Math.random() * counter);
+        // Decrease counter by 1 (decrement)
+        counter--;
+        // Swap tje last element with it
+        const temp = array[counter];
+        array[counter] = array[idx];
+        array[idx] = temp;
     }
+    return array;
 }
