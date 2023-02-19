@@ -1,3 +1,9 @@
+function setup() {
+    createCanvas(1000, 800);
+    background('#361d2e');
+    let myCard = new Card();
+}
+
 // Create class for Card
 class Card {
     // Properties = like variables but they are specific to this class
