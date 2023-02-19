@@ -1,10 +1,21 @@
 let myCard;
 const DOWN = 'down';
 const UP = 'up';
+let startingX = 100;
+let startingY = 100;
+let cards = [];
+const gameState = {
+
+};
+
 function setup() {
     createCanvas(1000, 800);
     background('#361d2e');
-    myCard = new Card();
+    for (let i = 0; i < 5; i++) {
+        cards.push(new Card(startingX, startingY));
+        startingX += 150;
+    }
+
 }
 
 function mousePressed() {
@@ -15,9 +26,9 @@ function mousePressed() {
 // Create class for Card
 class Card {
     // Properties = like variables but they are specific to this class
-    constructor () {
-        this.x = 100;
-        this.y = 100;
+    constructor (x, y) {
+        this.x = x;
+        this.y = y;
         this.width = 100;
         this.height = 150;
         this.face = DOWN;
