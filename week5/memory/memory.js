@@ -1,4 +1,4 @@
-let myCard;
+
 const DOWN = 'down';
 const UP = 'up';
 let startingX = 100;
@@ -24,8 +24,12 @@ function setup() {
 
 }
 
-function mousePressed() {
-    console.log(myCard.didHit(mouseX, mouseY));
+function mouseClicked() {
+    for (let k = 0; k< cards.length; k++) {
+        if(cards[k].didHit(mouseX, mouseY)) {
+            console.log('flipped');
+        }
+    }
     
 }
 
