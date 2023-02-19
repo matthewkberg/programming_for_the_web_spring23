@@ -12,6 +12,7 @@ class Card {
         this.y = 100;
         this.width = 100;
         this.height = 150;
+        this.show();
     }
     // Method = like functions but specific to this class
     show () {
