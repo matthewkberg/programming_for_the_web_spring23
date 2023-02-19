@@ -5,7 +5,11 @@ let startingX = 100; // starting x point
 let startingY = 150; // starting y point
 let cards = []; // Array for my cards
 const gameState = {
-
+    totalPairs: 0,
+    flippedCards: [],
+    numMatched: 0,
+    attempts: 0,
+    waiting: false
 };
 let cardfaceArray = [];
 let cardBack;
@@ -55,8 +59,10 @@ function setup() {
 
 function mouseClicked() {
     for (let k = 0; k< cards.length; k++) { // Loops through all cards
-        if(cards[k].didHit(mouseX, mouseY)) { // If you click on a card it will flip
+        // If you click on a card it will flip
+        if(gameState.flippedCards.length < 2 && cards[k].didHit(mouseX, mouseY)) { 
             console.log('flipped', cards[k]);
+            gameState.flippedCards.push(cards[k]);
         }
     }
     
@@ -72,18 +78,20 @@ class Card {
         this.height = 300;
         this.face = DOWN;
         this.cardFaceImg = cardFaceImg;
+        this.isMatch = false;
         this.show();
     }
     // Method = like functions but specific to this class
     show () {
-        if (this.face === DOWN) {
-            fill('#86a397')
-            rect(this.x, this.y, this.width, this.height, 10);
-            image(cardBack, this.x, this.y);
-        } else {
+        if (this.face === UP || this.isMatch) {
             fill('#e1b07e')
             rect(this.x, this.y, this.width, this.height, 10);
             image(this.cardFaceImg, this.x, this.y);
+
+        } else {
+            fill('#86a397')
+            rect(this.x, this.y, this.width, this.height, 10);
+            image(cardBack, this.x, this.y);
         }
         
     }
