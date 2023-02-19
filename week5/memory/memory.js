@@ -2,7 +2,7 @@
 const DOWN = 'down';
 const UP = 'up';
 let startingX = 100; // starting points
-let startingY = 100;
+let startingY = 150;
 let cards = []; // Array for my cards
 const gameState = {
 
@@ -13,14 +13,14 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(1200, 1000);
+    createCanvas(1600, 1600);
     background('#361d2e');
     for (let j = 0; j < 4; j++) { // Loop for new rows
         for (let i = 0; i < 5; i++) { // Loop for initial row
             cards.push(new Card(startingX, startingY)); // New instance
-            startingX += 150;
+            startingX += 250;
         }
-       startingY += 200;
+       startingY += 350;
        startingX = 100;
         
     }
@@ -43,8 +43,8 @@ class Card {
     constructor (x, y) { // x & y are the parameters for moving the card position
         this.x = x;
         this.y = y;
-        this.width = 100;
-        this.height = 150;
+        this.width = 200;
+        this.height = 300;
         this.face = DOWN;
         this.show();
     }
@@ -53,7 +53,7 @@ class Card {
         if (this.face === DOWN) {
             fill('#86a397')
             rect(this.x, this.y, this.width, this.height, 10);
-            image(cardBack, this.x, this.y, 100, 150);
+            image(cardBack, this.x, this.y);
         } else {
             fill('#e1b07e')
             rect(this.x, this.y, this.width, this.height, 10);
