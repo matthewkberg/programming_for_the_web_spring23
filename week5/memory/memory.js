@@ -9,12 +9,18 @@ const gameState = {
 };
 
 function setup() {
-    createCanvas(1000, 800);
+    createCanvas(1200, 1000);
     background('#361d2e');
-    for (let i = 0; i < 5; i++) {
-        cards.push(new Card(startingX, startingY));
-        startingX += 150;
+    for (let j = 0; j < 4; j++) {
+        for (let i = 0; i < 5; i++) {
+            cards.push(new Card(startingX, startingY));
+            startingX += 150;
+        }
+       startingY += 200;
+       startingX = 100;
+        
     }
+    
 
 }
 
