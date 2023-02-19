@@ -30,7 +30,7 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(1800, 1600);
+    createCanvas(1300, 1000);
     //background('#361d2e');
     let selectedFaces = [];
     for (let z = 0; z < 10; z++) {
@@ -47,9 +47,9 @@ function setup() {
         for (let i = 0; i < 5; i++) { // Loop for initial row
             const faceImage = selectedFaces.pop();
             cards.push(new Card(startingX, startingY, faceImage)); // New instance
-            startingX += 250;
+            startingX += 150;
         }
-       startingY += 350;
+       startingY += 200;
        startingX = 100;
         
     }
@@ -60,9 +60,9 @@ function setup() {
 function draw() {
     background('#361d2e');
     if (gameState.numMatched === gameState.totalPairs) {
-        fill('#e1b07e');
+        fill('#86a397');
         textSize(32);
-        text('You are a winner baby!', 1400, 550)
+        text('You are a winner baby!', 900, 450)
         noLoop();
     }
     for (let l = 0; l < cards.length; l++) {
@@ -76,8 +76,10 @@ function draw() {
     gameState.waiting = false;
     fill('#e5be9e');
     textSize(48);
-    text('Attempts: ' + gameState.attempts, 1400, 400);
-    text('Matches: ' + gameState.numMatched, 1400, 500);
+    text('Attempts: ' + gameState.attempts, 900, 300);
+    text('Matches: ' + gameState.numMatched, 900, 400);
+    textSize(60);
+    text('Bring Back My Girls', 190, 100);
 }
 
 function mouseClicked() {
@@ -120,8 +122,8 @@ class Card {
     constructor (x, y, cardFaceImg) { // x & y are the parameters for moving the card position
         this.x = x;
         this.y = y;
-        this.width = 200;
-        this.height = 300;
+        this.width = 100;
+        this.height = 150;
         this.face = DOWN;
         this.cardFaceImg = cardFaceImg;
         this.isMatch = false;
@@ -132,12 +134,12 @@ class Card {
         if (this.face === UP || this.isMatch) {
             fill('#e1b07e')
             rect(this.x, this.y, this.width, this.height, 10);
-            image(this.cardFaceImg, this.x, this.y);
+            image(this.cardFaceImg, this.x, this.y, 100, 150);
 
         } else {
             fill('#86a397')
             rect(this.x, this.y, this.width, this.height, 10);
-            image(cardBack, this.x, this.y);
+            image(cardBack, this.x, this.y, 100, 150);
         }
         
     }
