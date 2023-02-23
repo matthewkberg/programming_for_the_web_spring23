@@ -1,3 +1,9 @@
 const {createApp} = Vue;
 
-createApp().mount("#myApp");
+createApp({
+    data() { // Whatever data is returned here is what we have access to
+       return {
+        name: "Matt"
+        }
+    }
+}).mount("#myApp");
