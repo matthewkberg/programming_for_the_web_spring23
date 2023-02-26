@@ -14,10 +14,13 @@
         <h1>So you think you know {{animal}}?</h1>
         <p>Did you know...</p>
         <ul>
-            <li>Llamas are able to learn to understand and perform basic tasks.</li>
+            <li v-if="learn">{{animal}} are able to learn to understand and perform basic tasks.</li>
             <li>A llama's lifespan is {{lifespan}}.</li>
+            <li>{{animal}} are very social and live in {{social}}.</li>
+            <li>{{animal}} can grow to be {{height}} tall!</li>
+            <li>{{communication}} is one of the ways llamas communicate.</li>
         </ul>
     </div>
-    <script src="llama.js"></script>
+    <script src="./llama.js"></script>
 </body>
 </html>

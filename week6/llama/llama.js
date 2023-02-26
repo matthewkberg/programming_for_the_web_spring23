@@ -1,10 +1,15 @@
 const {createApp} = Vue;
 
 createApp({
-    data() { // Whatever data is returned here is what we have access to
+    data() {
        return {
         animal: "Llamas",
-        learn: true // Boolean
+        learn: true,
+        lifespan: "20 years",
+        social: "herds",
+        height: "6 feet",
+        communication: "Humming",
+        
 
         }
     }
