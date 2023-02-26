@@ -1,0 +1,28 @@
+html {
+    box-sizing: border-box;
+  
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 3rem;
+    background-color: rgb(167, 188, 204);
+  }
+  
+  h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 80px;
+    font-weight: 600;
+
+  }
+  
+  h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  

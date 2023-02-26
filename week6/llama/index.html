@@ -7,18 +7,23 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Llamas, Llamas, Llamas!</title>
     <link href="https://fonts.googleapis.com/css?family=Caveat|Open+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div id="myFacts">
-        <h1>So you think you know {{animal}}?</h1>
-        <p>Did you know...</p>
+        <h1 class="title">So you think you know {{animal}}?</h1>
+        <h2>Did you know...</h2>
         <ul>
             <li v-if="learn">{{animal}} are able to learn to understand and perform basic tasks.</li>
             <li>A llama's lifespan is {{lifespan}}.</li>
             <li>{{animal}} are very social and live in {{social}}.</li>
             <li>{{animal}} can grow to be {{height}} tall!</li>
             <li>{{communication}} is one of the ways llamas communicate.</li>
+            <li>{{animal}} are used as therapy animals to work in {{workspaces}}.</li>
+            <li>National Llama Day is {{celebrate}}.</li>
+            <li>{{animal}} can shoot {{spit}} spit up to 10 feet!</li>
+            <li>{{animal}} are {{diet}} with highly efficient digestive systems.</li>
+            <li>{{animal}} are close relatives of {{relatives}}.</li>
         </ul>
     </div>
     <script src="./llama.js"></script>
