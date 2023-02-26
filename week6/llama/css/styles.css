@@ -12,8 +12,11 @@ html {
     background-color: rgb(167, 188, 204);
   }
   
-  h1 {
+  h1, h2, h3 {
     font-family: 'Caveat', cursive;
+  }
+
+  h1 {
     font-size: 80px;
     font-weight: 600;
 
@@ -23,6 +26,11 @@ html {
     font-family: 'Caveat', cursive;
     font-size: 40px;
     font-weight: 400;
+  }
+
+  footer {
+    padding-top: 3rem;
+    text-align: center;
   }
 
   
