@@ -3,6 +3,10 @@ html {
     color: #524230;
 }
 
+img {
+    max-width: 100px;
+}
+
 .odd {
     background-color: #d3b8a4;
 }
