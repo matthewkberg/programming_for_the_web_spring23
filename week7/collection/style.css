@@ -1,9 +1,15 @@
 html {
-    background-color: #ede2da;
+    min-height: 1200px;
+    background: linear-gradient(to bottom right, #b6b697, #6d6d5a);
     color: #524230;
 }
 body {
     margin: 3rem;
+    font-family: ;
+}
+
+h1 {
+    font-family: 'Bungee', cursive;
 }
 
 table {
@@ -11,13 +17,13 @@ table {
     max-width: 1000px;
 }
 
+thead {
+    font-size: 18px;
+}
+
 td {
     min-width: 100px;
     max-width: 400px;
-}
-
-td-title {
-    text-align: center;
 }
 
 img {
@@ -27,4 +33,8 @@ img {
 
 .odd {
     background-color: #d3b8a4;
+}
+
+.even {
+    background-color: #ede2da;
 }
