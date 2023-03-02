@@ -22,7 +22,10 @@
                 <th>Synopsis</th>
             </thead>
             <tbody>
-                <tr v-for="film in films">
+                <tr 
+                    v-for="(film, idx) in films"
+                    v-bind:class="{odd: idx%2==0}"
+                >
                     <td>Poster here</td>
                     <td>{{film.title}}</td>
                     <td>{{film.year}}</td>
