@@ -10,16 +10,15 @@
 
 <body>
   <div id="llama-list">
+
     <h1 class="llama-list-title">What to name your next llama</h1>
-    <div class="list-container">
-      <div class="list-head">
-        <span class="rank">Rank</span>
-        <span class="name">Name</span>
-      </div>
 
-    </div>
+    <table class="list-container">
+      <thead class="list-head">
+        <th class="rank">Rank</th>
+        <th class="name">Name</th>
+      </thead>
 
-    <table>
       <tbody>
         <tr
           v-for="(thing, idx) in llamas"
@@ -29,7 +28,7 @@
           <td class="name-table" v-bind:class="{'llama': thing.name.toLowerCase().includes('llama')}">{{thing.name}}</td>
         </tr>
       </tbody>
-  </table>
+    </table>
  
 
 
