@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Llamas Vs Alpacas</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Llamas Vs Alpacas</title>
 </head>
 <body>
     <h1>Llamas and Aplacas</h1>
     <div id="myApp" v-cloak>
         <h2><a v-bind:href="llamaWiki">Llamas</a></h2>
-        <ul>
+        <ul v-bind:style="{fontSize: '20px', color: 'white'}">
             <li>Llamas are able to learn to understand and perform basic tasks.</li>
             <li>A llama's lifespan is 20 years.</li>
             <li>Llamas are very social and live in herds.</li>
             <li>LLamas can grow to be 6 feet tall!</li>
-            <li>Humming is one of the ways llamas communicate.</li>
+            <li v-bind:style="{background: 'red'}">Humming is one of the ways llamas communicate.</li>
             <li>LLamas are used as therapy animals to work in hospitals and schools.</li>
             <li>National Llama Day is December 9th.</li>
             <li>Llamas can shoot green spit up to 10 feet!</li>
@@ -26,13 +26,13 @@
         </ul>
 
         <h2><a v-bind:href="alpacaWiki">Alpacas</a></h2>
-        <ul>
+        <ul v-bind:style="{fontSize: '20px', color: 'blue'}">
             <li>Alpacas resemble a small llama in appearance.</li>
             <li>Alpacas are kept in herds that graze on the level altitudes.</li>
             <li>Unlike llamas, alpacas were not bred to be beasts of burden, but were bred specifically for their fiber.</li>
             <li>Alpaca fiber is used for making knitted and woven items, similar to wool.</li>
             <li>Alpacas have been domesticated for thousands of years.</li>
-            <li>Alpacas are social herd animals that live in family groups.</li>
+            <li v-bind:style="{background: 'yellow'}">Alpacas are social herd animals that live in family groups.</li>
             <li>Not all alpacas spit, but all are capable of doing so.</li>
             <li>Most alpacas do not like being grabbed.</li>
             <li>When they are in danger, alpacas make a high-pitched, shrieking whine.</li>
