@@ -1,14 +1,15 @@
 html {
     min-height: 1200px;
-    background: linear-gradient(to bottom right, #b6b697, #6d6d5a);
+    background: linear-gradient(#b6b697, #6d6d5a);
     color: #524230;
 }
 body {
-    margin: 3rem;
-    font-family: ;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    font-family: 'Noto Serif', serif;
 }
 
-h1 {
+h1, th {
     font-family: 'Bungee', cursive;
 }
 
@@ -23,7 +24,7 @@ thead {
 
 td {
     min-width: 100px;
-    max-width: 400px;
+    max-width: 800px;
 }
 
 img {
