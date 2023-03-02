@@ -25,12 +25,16 @@
                 <tr 
                     v-for="(film, idx) in films"
                     v-bind:class="{odd: idx%2==0}"
+                    v-bind:style="{borderRightStyle: 'hidden'}"
                 >
-                    <td><img v-bind:src="film.poster" v-bind:alt="film.title + ' poster'"></td>
-                    <td>{{film.title}}</td>
-                    <td>{{film.year}}</td>
-                    <td>{{film.genres}}</td>
-                    <td>{{film.synopsis}}</td>
+                    <td><img v-bind:src="film.poster"
+                             v-bind:alt="film.title + ' poster'"
+                             v-bind:style="{borderRightStyle: 'hidden'}">
+                    </td>
+                    <td v-bind:style="{textAlign: 'center'}">{{film.title}}</td>
+                    <td v-bind:style="{textAlign: 'center'}">{{film.year}}</td>
+                    <td v-bind:style="{textAlign: 'center'}">{{film.genres}}</td>
+                    <td v-bind:style="{padding: '15px'}">{{film.synopsis}}</td>
                 </tr>
             </tbody>
         </table>

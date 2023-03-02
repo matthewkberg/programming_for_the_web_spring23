@@ -2,9 +2,27 @@ html {
     background-color: #ede2da;
     color: #524230;
 }
+body {
+    margin: 3rem;
+}
+
+table {
+    border: 0px solid;
+    max-width: 1000px;
+}
+
+td {
+    min-width: 100px;
+    max-width: 400px;
+}
+
+td-title {
+    text-align: center;
+}
 
 img {
     max-width: 100px;
+    padding: 5px;
 }
 
 .odd {
