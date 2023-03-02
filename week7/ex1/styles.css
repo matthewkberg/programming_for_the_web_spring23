@@ -1,3 +1,21 @@
 [v-cloak] {
     display: none;
 }
+
+body {
+    margin: 3rem;
+    background-color: rgb(71, 121, 121);
+}
+
+h1 {
+    color: rgb(195, 216, 234);
+}
+
+a {
+    color: rgb(96, 16, 194);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(137, 8, 8);
+}
