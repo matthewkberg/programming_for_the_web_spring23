@@ -8,5 +8,10 @@ createApp ({
             operation: 'add',
             total: null
         }
+    },
+    methods: {
+        calculate: (num1, num2) {
+            
+        }
     }
 }).mount('#myApp')
