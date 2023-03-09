@@ -21,6 +21,6 @@ div label {
     margin-right: 10px;
 }
 
-div input {
+div input, div select {
     flex-grow: 1;
 }
