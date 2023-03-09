@@ -5,11 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="./style.css">
     <title>Alpaca Fan Club Registration Form</title>
 </head>
 <body>
     <div id="myApp" v-cloak>
-        
+        <form>
+            <fieldset>
+                <legend>Fan Club Registration</legend>
+                <div>
+                    <label>First Name</label>
+                    <input>
+                </div>
+                <div>
+                    <label>Last Name</label>
+                    <input>
+                </div>
+                <div>
+                    <label>Street Address</label>
+                    <input>
+                </div>
+                <div>
+                    <label>State/Province</label>
+                    <select>
+
+                    </select>
+                </div>
+                <div>
+                    <label>Country</label>
+                    <input>
+                </div>
+                <div>
+                    <p>Favorite alpaca colors</p>
+                </div>
+                <div>
+                    <label>Alpaca Status</label>
+                    <textarea cols="30" rows="10"></textarea>
+                </div>
+            </fieldset>
+        </form>
+
     </div>
     <script src="./form.js"></script>
 </body>
