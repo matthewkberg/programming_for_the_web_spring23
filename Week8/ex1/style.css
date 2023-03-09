@@ -13,7 +13,7 @@ div {
     display: flex;
 }
 
-div.alpaca-status, div.alpaca-color {
+div.alpaca-status, div.alpaca-color, div.output {
     flex-direction: column;
 }
 

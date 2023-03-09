@@ -50,13 +50,21 @@
                     </div>
                 </div>
                 <div class="alpaca-status">
-                    <label>Alpaca Status</label>
-                    <textarea cols="30" rows="10"></textarea>
+                    <label for="status">Alpaca Status</label>
+                    <textarea 
+                    cols="30" rows="10" 
+                    id="status" 
+                    v-model="status"></textarea>
                 </div>
             </fieldset>
-            <div>
+            <div class="output">
                 <h3>Output</h3>
-                First Name: {{firstName}}
+                First Name: {{firstName}}<br>
+                Last Name: {{lastName}}<br>
+                Street Address: {{street}}<br>
+                City: {{city}}<br>
+                State/Province: {{state}}<br>
+                Status: {{status}}<br>
             </div>
         </form>
 

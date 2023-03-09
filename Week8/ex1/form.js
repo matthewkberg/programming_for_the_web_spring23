@@ -7,6 +7,7 @@ createApp ({
             lastName: '',
             street: '',
             city: '',
+            state: '',
             country: '',
             colors: [],
             status: ''
