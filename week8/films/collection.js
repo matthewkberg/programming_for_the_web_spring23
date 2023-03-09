@@ -2,6 +2,13 @@ const { createApp } = Vue;
     createApp({ 
       data(){
         return {
+          newFilm: {
+            poster: '',
+            title: '',
+            year: null,
+            genres: '',
+            synopsis: ''
+          },
           films: [
             {
                 poster: "https://m.media-amazon.com/images/M/MV5BNDg5NzgzNDM4Nl5BMl5BanBnXkFtZTcwNzY1MzY4Mw@@._V1_FMjpg_UY720_.jpg",
@@ -39,6 +46,13 @@ const { createApp } = Vue;
                 synopsis: "Martha has run away from an abusive hippie-like cult where she was living as Marcy May for two years. She turns to her sister and brother-in-law who take her in and want to help her. The problem is Martha is having a hard time separating dreams from reality and when haunting memories of her past keep resurfacing, she may need more help than anyone is able to give her."                
             }
           ]
+        }
+      },
+      methods: {
+        submitHandler () {
+          console.log('submitted');
+          this.films = this.films.concat(this.newFilm);
+
         }
       }
     }).mount("#myApp");

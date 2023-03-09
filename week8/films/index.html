@@ -43,6 +43,47 @@
         </table>
 
     </div>
+    <form v-on:submit.prevent="submitHandler">
+        <fieldset>
+            <legend>Add a film to the collection</legend>
+            <div>
+                <label for="poster">Poster</label>
+                <input 
+                    id="poster" 
+                    type="text"
+                    v-model="newFilm.poster">
+            </div>
+            <div>
+                <label for="title">Title</label>
+                <input 
+                    id="title" 
+                    type="text"
+                    v-model="newFilm.title">
+            </div>
+            <div>
+                <label for="year">Year</label>
+                <input 
+                    id="year" 
+                    type="text"
+                    v-model="newFilm.year">
+            </div>
+            <div>
+                <label for="genres">Genres</label>
+                <input 
+                    id="genres" 
+                    type="text"
+                    v-model="newFilm.genres">
+            </div>
+            <div>
+                <label for="synopsis">Synopsis</label>
+                <input 
+                    id="synopsis" 
+                    type="text"
+                    v-model="newFilm.synopsis">
+            </div>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
     
     <script src="./collection.js"></script>
 </body>
