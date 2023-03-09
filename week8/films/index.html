@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Show and Tell Collection</title>
+</head>
+
+<body>
+    <h1>Film Collection</h1>
+    <div id="myApp">
+        <table>
+            <thead>
+                <th>Poster</th>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Genres</th>
+                <th>Synopsis</th>
+            </thead>
+            <tbody>
+                <tr 
+                    v-for="(film, idx) in films"
+                    v-bind:class="{odd: idx%2==0, even: idx%2!==0}"
+                >
+                    <td>
+                        <img v-bind:src="film.poster"
+                             v-bind:alt="film.title + ' poster'"
+                        >
+                    </td>
+                    <td v-bind:style="{textAlign: 'center'}">{{film.title}}</td>
+                    <td v-bind:style="{textAlign: 'center'}">{{film.year}}</td>
+                    <td v-bind:style="{textAlign: 'center'}">{{film.genres}}</td>
+                    <td v-bind:style="{padding: '15px'}">{{film.synopsis}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    
+    <script src="./collection.js"></script>
+</body>
+
+</html>

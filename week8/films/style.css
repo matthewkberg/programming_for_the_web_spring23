@@ -1,0 +1,42 @@
+html {
+    min-height: 1200px;
+    background: linear-gradient(#b6b697, #6d6d5a);
+    color: #524230;
+}
+body {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Noto Serif', serif;
+}
+
+h1, th {
+    font-family: 'Bungee', cursive;
+}
+
+table {
+    border: 0px solid;
+    max-width: 1000px;
+}
+
+thead {
+    font-size: 18px;
+}
+
+td {
+    min-width: 100px;
+    max-width: 800px;
+}
+
+img {
+    max-width: 100px;
+    padding: 5px;
+}
+
+.odd {
+    background-color: #d3b8a4;
+}
+
+.even {
+    background-color: #ede2da;
+}
