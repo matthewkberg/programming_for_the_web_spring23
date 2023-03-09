@@ -63,6 +63,11 @@ const { createApp } = Vue;
             genres: '',
             synopsis: ''
           }
+        },
+        deleteFilm (film) {
+          this.films = this.films.filter(arrayFilm => {
+            return arrayFilm.title !== film.title;
+          })
         }
       }
     }).mount("#myApp");

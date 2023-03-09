@@ -23,6 +23,7 @@
                 <th>Year</th>
                 <th>Genres</th>
                 <th>Synopsis</th>
+                <th>Remove</th>
             </thead>
             <tbody>
                 <tr 
@@ -38,6 +39,8 @@
                     <td v-bind:style="{textAlign: 'center'}">{{film.year}}</td>
                     <td v-bind:style="{textAlign: 'center'}">{{film.genres}}</td>
                     <td v-bind:style="{padding: '15px'}">{{film.synopsis}}</td>
+                    <td v-bind:style="{padding: '15px'}">
+                        <button type="button" v-on:click="deleteFilm(film)">Delete</button></td>
                 </tr>
             </tbody>
         </table>
