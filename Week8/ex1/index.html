@@ -31,9 +31,13 @@
                 </div>
                 <div>
                     <label>State/Province</label>
-                    <select>
-
-                    </select>
+                        <select 
+                        id=""
+                        v-model="state">
+                            <option v-for="state in availableStates" v-bind:value="state.value">
+                                {{state.name}}
+                            </option>
+                        </select>
                 </div>
                 <div>
                     <label for="country">Country</label>
@@ -47,7 +51,9 @@
                                 <label v-bind:for="color.value">
                                     <input 
                                     type="checkbox" 
-                                    name="" v-bind:id="color.value"
+                                    name=""
+                                    v-model="selectedColors"
+                                    v-bind:id="color.value"
                                     v-bind:value="color.value">
                                     {{color.name}}
                                 </label>
@@ -71,6 +77,7 @@
                 Street Address: {{street}}<br>
                 City: {{city}}<br>
                 State/Province: {{state}}<br>
+                Color: {{selectedColors}}<br>
                 Status: {{status}}<br>
             </div>
         </form>
