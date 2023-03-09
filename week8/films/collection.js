@@ -52,7 +52,17 @@ const { createApp } = Vue;
         submitHandler () {
           console.log('submitted');
           this.films = this.films.concat(this.newFilm);
+          this.resetForm();
 
+        },
+        resetForm () {
+          this.newFilm = {
+            poster: '',
+            title: '',
+            year: null,
+            genres: '',
+            synopsis: ''
+          }
         }
       }
     }).mount("#myApp");
