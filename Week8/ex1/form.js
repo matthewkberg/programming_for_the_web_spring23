@@ -9,7 +9,16 @@ createApp ({
             city: '',
             state: '',
             country: '',
-            colors: [],
+            colors: [
+                {name: 'Snow', value: 'snow'},
+                {name: 'Pumpkin', value: 'pumpkin'},
+                {name: 'Coal', value: 'coal'},
+                {name: 'Toast', value: 'toast'},
+                {name: 'Pickle Green', value: 'pickle-green'},
+                {name: 'Rainbow', value: 'rainbow'},
+                {name: 'Smoke', value: 'smoke'},
+                {name: 'Disco Ball', value: 'disco-ball'}
+            ],
             status: ''
 
         }
