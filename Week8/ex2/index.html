@@ -13,14 +13,14 @@
     <div id="myApp">
         <form>
             <div>
-                <input type="number" placeholder="first number">
-                <select >
+                <input v-model="firstNum" type="number" placeholder="first number">
+                <select v-model="operation">
                     <option value="add">+</option>
                     <option value="subtract">-</option>
                     <option value="multiply">&times;</option>
                     <option value="divide">&divide;</option>
                 </select>
-                <input type="number" placeholder="second number">
+                <input v-model="secondNum" type="number" placeholder="second number">
             </div>
             <button type="button">Calculate</button>
         </form>
