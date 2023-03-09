@@ -1,22 +1,23 @@
 html {
-    min-height: 1200px;
-    background: linear-gradient(#b6b697, #6d6d5a);
-    color: #524230;
+    min-height: 1500px;
+    background: linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    color: #21265b;
 }
 body {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     font-family: 'Noto Serif', serif;
 }
 
 h1, th {
     font-family: 'Bungee', cursive;
+    color: #21265b;
 }
 
 table {
     border: 0px solid;
-    max-width: 1000px;
+
 }
 
 thead {
@@ -33,10 +34,57 @@ img {
     padding: 5px;
 }
 
+button {
+    border-style: none;
+    border-radius:50px;
+    min-width: 150px;
+    min-height: 50px;
+    font-family: 'Bungee', serif;
+    color: #ede2da;
+    background-color: #962fbf;
+}
+
 .odd {
     background-color: #d3b8a4;
 }
 
 .even {
     background-color: #ede2da;
+}
+
+form {
+    width: 100%;
+    max-width: 1000px;
+    margin: 10px auto;
+    font-family: "Noto Serif", serif;
+    padding-bottom: 50px;
+}
+
+fieldset {
+    background-color: #ede2da;
+    border: none;
+}
+legend {
+    font-family: 'Bungee', cursive;
+    color: #21265b;
+    background-color: #ede2da;
+}
+
+div label {
+    margin-right: 10px;
+}
+
+div.form {
+    margin: 10px 0;
+    display: flex;
+}
+
+div input {
+    flex-grow: 1;
+}
+
+div.film-synopsis {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
 }

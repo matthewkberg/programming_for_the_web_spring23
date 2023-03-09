@@ -49,42 +49,42 @@
     <form v-on:submit.prevent="submitHandler">
         <fieldset>
             <legend>Add a film to the collection</legend>
-            <div>
+            <div class="form">
                 <label for="poster">Poster URL</label>
                 <input 
                     id="poster" 
                     type="text"
                     v-model="newFilm.poster">
             </div>
-            <div>
+            <div class="form">
                 <label for="title">Title</label>
                 <input 
                     id="title" 
                     type="text"
                     v-model="newFilm.title">
             </div>
-            <div>
+            <div class="form">
                 <label for="year">Year</label>
                 <input 
                     id="year" 
                     type="text"
                     v-model="newFilm.year">
             </div>
-            <div>
+            <div class="form">
                 <label for="genres">Genres</label>
                 <input 
                     id="genres" 
                     type="text"
                     v-model="newFilm.genres">
             </div>
-            <div>
+            <div class="film-synopsis">
                 <label for="synopsis">Synopsis</label>
-                <input 
-                    id="synopsis" 
-                    type="text"
-                    v-model="newFilm.synopsis">
+                <textarea 
+                cols="30" rows="10" 
+                id="synopsis" 
+                v-model="newFilm.synopsis"></textarea>
             </div>
-            <button type="submit">Submit</button>
+            <button class="submit-button" type="submit">Submit</button>
         </fieldset>
     </form>
     </div>
