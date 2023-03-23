@@ -22,7 +22,7 @@ camelids: [
 </script>
 
 <template>
- 
+ <p>This is the beginning of the rest of this exercise, lol.</p>
 </template>
 
 <style scoped>
