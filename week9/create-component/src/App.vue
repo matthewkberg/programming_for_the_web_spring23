@@ -1,5 +1,5 @@
 <script setup>
-camelids: [
+const camelids = [
       {
         commonName: "Lama",
         binomialName: "Lama glama",
@@ -23,6 +23,7 @@ camelids: [
 
 <template>
  <p>This is the beginning of the rest of this exercise, lol.</p>
+ <p v-for="camelid in camelids" v-bind:key="camelid.commonName">{{ camelid.commonName }}</p>
 </template>
 
 <style scoped>
