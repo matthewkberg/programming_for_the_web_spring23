@@ -35,14 +35,12 @@ const camelids = [
       <th>Image</th>
     </thead>
     <tbody>
-      <CamelidRow v-for="camelid in camelids" v-bind:camelid-name="camelid.commonName" v-bind:camelid-binomial="camelid.binomialName" v-bind:camelid-order="camelid.order" v-bind:camelid-family="camelid.family" v-bind:camelid-genus="camelid.genus" v-bind:camelid-species="camelid.species" v-bind:key="camelid.commonName">
+      <CamelidRow v-for="camelid in camelids" v-bind:camelid-name="camelid.commonName" v-bind:camelid-binomial="camelid.binomialName" v-bind:camelid-order="camelid.order" v-bind:camelid-family="camelid.family" v-bind:camelid-genus="camelid.genus" v-bind:camelid-species="camelid.species" v-bind:camelid-image="camelid.image" v-bind:key="camelid.commonName">
       </CamelidRow>
     </tbody>
  </table>
 </template>
 
 <style scoped>
-  .camelid-img {
-    max-width: 125px;
-  }
+
 </style>
