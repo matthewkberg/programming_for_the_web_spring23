@@ -1,4 +1,5 @@
 <script setup>
+import CamelidRow from "./components/CamelidRow.vue";
 const camelids = [
       {
         commonName: "Lama",
@@ -34,15 +35,8 @@ const camelids = [
       <th>Image</th>
     </thead>
     <tbody>
-      <tr v-for="camelid in camelids" v-bind:key="camelid.commonName">
-        <td>{{ camelid.commonName }}</td>
-        <td>{{ camelid.binomialName }}</td>
-        <td>{{ camelid.order }}</td>
-        <td>{{ camelid.family }}</td>
-        <td>{{ camelid.genus }}</td>
-        <td>{{ camelid.species }}</td>
-        <td><img class="camelid-img" v-bind:src="camelid.image" v-bind:alt="camelid.commonName"></td>
-      </tr>
+      <CamelidRow v-for="camelid in camelids" v-bind:camelid-name="camelid.commonName" v-bind:camelid-binomial="camelid.binomialName" v-bind:camelid-order="camelid.order" v-bind:camelid-family="camelid.family" v-bind:camelid-genus="camelid.genus" v-bind:camelid-species="camelid.species" v-bind:key="camelid.commonName">
+      </CamelidRow>
     </tbody>
  </table>
 </template>
