@@ -22,10 +22,33 @@ const camelids = [
 </script>
 
 <template>
- <p>This is the beginning of the rest of this exercise, lol.</p>
- <p v-for="camelid in camelids" v-bind:key="camelid.commonName">{{ camelid.commonName }}</p>
+ <h1>Camelids Bay-beeee!</h1>
+ <table>
+    <thead>
+      <th>Common Name</th>
+      <th>Binomial Name</th>
+      <th>Order</th>
+      <th>Family</th>
+      <th>Genus</th>
+      <th>Species</th>
+      <th>Image</th>
+    </thead>
+    <tbody>
+      <tr v-for="camelid in camelids" v-bind:key="camelid.commonName">
+        <td>{{ camelid.commonName }}</td>
+        <td>{{ camelid.binomialName }}</td>
+        <td>{{ camelid.order }}</td>
+        <td>{{ camelid.family }}</td>
+        <td>{{ camelid.genus }}</td>
+        <td>{{ camelid.species }}</td>
+        <td><img class="camelid-img" v-bind:src="camelid.image" v-bind:alt="camelid.commonName"></td>
+      </tr>
+    </tbody>
+ </table>
 </template>
 
 <style scoped>
-
+  .camelid-img {
+    max-width: 125px;
+  }
 </style>
