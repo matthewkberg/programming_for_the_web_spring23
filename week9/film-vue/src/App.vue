@@ -39,6 +39,10 @@ const films = [
             }
           ];
           const state = reactive({films: films})
+          function handleDelete(filmName){
+            console.log("we want to delete", filmName)
+
+          }
 </script>
 
 <template>
@@ -60,7 +64,8 @@ const films = [
         v-bind:film-year="film.year" 
         v-bind:film-genres="film.genres" 
         v-bind:film-synopsis="film.synopsis" 
-        v-bind:key="film.title">
+        v-bind:key="film.title"
+        v-on:delete-film="handleDelete">
         </FilmRow>
       </tbody>
       </table>

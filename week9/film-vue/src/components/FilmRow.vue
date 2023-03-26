@@ -13,7 +13,7 @@
         <td v-bind:style="{textAlign: 'center'}">{{ props.filmGenres }}</td>
         <td v-bind:style="{padding: '15px'}">{{ props.filmSynopsis }}</td>
         <td v-bind:style="{padding: '15px'}">
-            <button type="button">Delete</button>
+            <button type="button" v-on:click="$emit('deleteFilm', props.filmName)">Delete</button>
         </td>
     </tr>
 </template>
