@@ -1,6 +1,6 @@
 <script setup>
 import FilmRow from './components/FilmRow.vue';
-
+import { reactive } from "vue";
 const films = [
             {
                 poster: "https://m.media-amazon.com/images/M/MV5BNDg5NzgzNDM4Nl5BMl5BanBnXkFtZTcwNzY1MzY4Mw@@._V1_FMjpg_UY720_.jpg",
@@ -37,7 +37,8 @@ const films = [
                 genres: "Drama, Mystery, Thriller",
                 synopsis: "Martha has run away from an abusive hippie-like cult where she was living as Marcy May for two years. She turns to her sister and brother-in-law who take her in and want to help her. The problem is Martha is having a hard time separating dreams from reality and when haunting memories of her past keep resurfacing, she may need more help than anyone is able to give her."                
             }
-          ]
+          ];
+          const state = reactive({films: films})
 </script>
 
 <template>
@@ -52,7 +53,7 @@ const films = [
         <th>Remove</th>
       </thead>
       <tbody>
-        <FilmRow v-for="(film, idx) in films"
+        <FilmRow v-for="(film, idx) in state.films"
                     v-bind:class="{odd: idx%2==0, even: idx%2!==0}" 
         v-bind:film-poster="film.poster"
         v-bind:film-name="film.title" 
