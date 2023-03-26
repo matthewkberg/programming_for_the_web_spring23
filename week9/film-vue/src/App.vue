@@ -52,7 +52,7 @@ const films = [
         <th>Remove</th>
       </thead>
       <tbody>
-        <FilmRow v-for="film in films">
+        <FilmRow v-for="film in films" v-bind:key="film.title">
         </FilmRow>
       </tbody>
       </table>

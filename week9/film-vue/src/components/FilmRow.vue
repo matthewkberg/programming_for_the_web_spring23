@@ -5,10 +5,10 @@
 <template>
     <tr>
         <td><img class="poster-img"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>title</td>
+        <td>year</td>
+        <td>genre</td>
+        <td>synopsis</td>
         <td>
             <button type="button">Delete</button>
         </td>
