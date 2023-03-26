@@ -41,6 +41,9 @@ const films = [
           const state = reactive({films: films})
           function handleDelete(filmName){
             console.log("we want to delete", filmName)
+            state.films = state.films.filter(film => {
+              return film.title !== filmName;
+            })
 
           }
 </script>
