@@ -52,7 +52,8 @@ const films = [
         <th>Remove</th>
       </thead>
       <tbody>
-        <FilmRow v-for="film in films" 
+        <FilmRow v-for="(film, idx) in films"
+                    v-bind:class="{odd: idx%2==0, even: idx%2!==0}" 
         v-bind:film-poster="film.poster"
         v-bind:film-name="film.title" 
         v-bind:film-year="film.year" 
@@ -66,4 +67,26 @@ const films = [
 
 <style scoped>
 
+table {
+    border: 0px solid;
+    min-width: 1200px;
+
+}
+
+thead {
+    font-size: 18px;
+}
+
+td {
+    min-width: 100px;
+    max-width: 800px;
+}
+
+.odd {
+    background-color: #d3b8a4;
+}
+
+.even {
+    background-color: #ede2da;
+}  
 </style>

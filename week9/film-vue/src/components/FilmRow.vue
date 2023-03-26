@@ -4,12 +4,15 @@
 
 <template>
     <tr>
-        <td><img class="poster-img" v-bind:src="filmPoster"></td>
-        <td>{{ props.filmName }}</td>
-        <td>{{ props.filmYear }}</td>
-        <td>{{ props.filmGenres }}</td>
-        <td>{{ props.filmSynopsis }}</td>
-        <td>
+        <td><img class="poster-img" 
+            v-bind:src="filmPoster"
+            v-bind:alt="filmPoster + ' poster'"
+            ></td>
+        <td v-bind:style="{textAlign: 'center'}">{{ props.filmName }}</td>
+        <td v-bind:style="{textAlign: 'center'}">{{ props.filmYear }}</td>
+        <td v-bind:style="{textAlign: 'center'}">{{ props.filmGenres }}</td>
+        <td v-bind:style="{padding: '15px'}">{{ props.filmSynopsis }}</td>
+        <td v-bind:style="{padding: '15px'}">
             <button type="button">Delete</button>
         </td>
     </tr>
@@ -19,11 +22,6 @@
 .poster-img {
     max-width: 100px;
     padding: 5px;
-}
-
-td {
-    min-width: 100px;
-    max-width: 800px;
 }
 
 button {
@@ -36,11 +34,4 @@ button {
     background-color: #962fbf;
 }
 
-.odd {
-    background-color: #d3b8a4;
-}
-
-.even {
-    background-color: #ede2da;
-}
 </style>
