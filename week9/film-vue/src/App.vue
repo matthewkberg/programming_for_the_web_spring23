@@ -38,13 +38,35 @@ const films = [
                 synopsis: "Martha has run away from an abusive hippie-like cult where she was living as Marcy May for two years. She turns to her sister and brother-in-law who take her in and want to help her. The problem is Martha is having a hard time separating dreams from reality and when haunting memories of her past keep resurfacing, she may need more help than anyone is able to give her."                
             }
           ];
-          const state = reactive({films: films})
+          const state = reactive({
+            films: films,
+            newFilmPoster: "",
+            newFilmTitle: "",
+            newFilmYear: "",
+            newFilmGenres: "",
+            newFilmSynopsis: ""
+          })
           function handleDelete(filmName){
             console.log("we want to delete", filmName)
             state.films = state.films.filter(film => {
               return film.title !== filmName;
             })
 
+          }
+          function handleSubmit() {
+            state.films.push({
+              poster: state.newFilmPoster,
+              title: state.newFilmTitle,
+              year: state.newFilmYear,
+              genres: state.newFilmGenres,
+              synopsis: state.newFilmSynopsis  
+            });
+            state.newFilmPoster = "",
+            state.newFilmTitle = "",
+            state.newFilmYear = "",
+            state.newFilmGenres = "",
+            state.newFilmSynopsis = ""
+            ;
           }
 </script>
 
@@ -72,6 +94,53 @@ const films = [
         </FilmRow>
       </tbody>
       </table>
+
+      <form v-on:submit.prevent="handleSubmit">
+        <fieldset>
+        <legend>Add a film to the collection</legend>
+            <div class="form">
+                <label for="newPoster">Poster URL</label>
+                <input 
+                    id="poster" 
+                    type="text"
+                    v-model="newFilmPoster"
+                    >
+            </div>
+            <div class="form">
+                <label for="title">Title</label>
+                <input 
+                    id="title" 
+                    type="text"
+                    v-model="newFilmTitle"
+                    >
+            </div>
+            <div class="form">
+                <label for="year">Year</label>
+                <input 
+                    id="year" 
+                    type="text"
+                    v-model="newFilmYear"
+                    >
+            </div>
+            <div class="form">
+                <label for="genres">Genres</label>
+                <input 
+                    id="genres" 
+                    type="text"
+                    v-model="newFilmGenres"
+                    >
+            </div>
+            <div class="film-synopsis">
+                <label for="synopsis">Synopsis</label>
+                <textarea 
+                cols="30" rows="10" 
+                id="synopsis"
+                v-model="newFilmSynopsis"
+                ></textarea>
+            </div>
+            <button class="submit-button" type="submit">Submit</button>
+        </fieldset>
+    </form>
 </template>
 
 <style scoped>
@@ -97,5 +166,52 @@ td {
 
 .even {
     background-color: #ede2da;
-}  
+}
+
+form {
+    width: 100%;
+    max-width: 1000px;
+    margin: 10px auto;
+    font-family: "Noto Serif", serif;
+    padding-bottom: 50px;
+}
+
+fieldset {
+    background-color: #ede2da;
+    border: none;
+}
+legend {
+    font-family: 'Bungee', cursive;
+    color: #21265b;
+    background-color: #ede2da;
+}
+
+div label {
+    margin-right: 10px;
+}
+
+div.form {
+    margin: 10px 0;
+    display: flex;
+}
+
+div input {
+    flex-grow: 1;
+}
+
+div.film-synopsis {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+button {
+    border-style: none;
+    border-radius:50px;
+    min-width: 150px;
+    min-height: 50px;
+    font-family: 'Bungee', serif;
+    color: #ede2da;
+    background-color: #962fbf;
+}
 </style>
