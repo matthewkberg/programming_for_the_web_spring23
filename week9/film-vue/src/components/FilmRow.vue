@@ -1,14 +1,14 @@
 <script setup>
-    
+    const props = defineProps(["filmPoster", "filmName", "filmYear", "filmGenres", "filmSynopsis"])
 </script>
 
 <template>
     <tr>
-        <td><img class="poster-img"></td>
-        <td>title</td>
-        <td>year</td>
-        <td>genre</td>
-        <td>synopsis</td>
+        <td><img class="poster-img" v-bind:src="filmPoster"></td>
+        <td>{{ props.filmName }}</td>
+        <td>{{ props.filmYear }}</td>
+        <td>{{ props.filmGenres }}</td>
+        <td>{{ props.filmSynopsis }}</td>
         <td>
             <button type="button">Delete</button>
         </td>
@@ -19,6 +19,11 @@
 .poster-img {
     max-width: 100px;
     padding: 5px;
+}
+
+td {
+    min-width: 100px;
+    max-width: 800px;
 }
 
 button {
