@@ -38,35 +38,34 @@ const films = [
                 synopsis: "Martha has run away from an abusive hippie-like cult where she was living as Marcy May for two years. She turns to her sister and brother-in-law who take her in and want to help her. The problem is Martha is having a hard time separating dreams from reality and when haunting memories of her past keep resurfacing, she may need more help than anyone is able to give her."                
             }
           ];
-          const state = reactive({
-            films: films,
-            newFilmPoster: "",
-            newFilmTitle: "",
-            newFilmYear: "",
-            newFilmGenres: "",
-            newFilmSynopsis: ""
-          })
+          const newFilm ={
+            poster: "",
+            title: "",
+            year: null,
+            genres: "",
+            synopsis: ""
+          };
+          const state = reactive({ films: films, newFilm});
           function handleDelete(filmName){
             console.log("we want to delete", filmName)
             state.films = state.films.filter(film => {
               return film.title !== filmName;
             })
-
-          }
+          };
           function handleSubmit() {
             state.films.push({
-              poster: state.newFilmPoster,
-              title: state.newFilmTitle,
-              year: state.newFilmYear,
-              genres: state.newFilmGenres,
-              synopsis: state.newFilmSynopsis  
+              poster: state.newFilm.poster,
+              title: state.newFilm.title,
+              year: state.newFilm.year,
+              genres: state.newFilm.genres,
+              synopsis: state.newFilm.synopsis
             });
-            state.newFilmPoster = "",
-            state.newFilmTitle = "",
-            state.newFilmYear = "",
-            state.newFilmGenres = "",
-            state.newFilmSynopsis = ""
-            ;
+            state.newFilm.poster = "";
+            state.newFilm.title = "";
+            state.newFilm.year = "";
+            state.newFilm.genres = "";
+            state.newFilm.synopsis = "";
+
           }
 </script>
 
@@ -103,7 +102,7 @@ const films = [
                 <input 
                     id="poster" 
                     type="text"
-                    v-model="newFilmPoster"
+                    v-model="newFilm.poster"
                     >
             </div>
             <div class="form">
@@ -111,7 +110,7 @@ const films = [
                 <input 
                     id="title" 
                     type="text"
-                    v-model="newFilmTitle"
+                    v-model="newFilm.title"
                     >
             </div>
             <div class="form">
@@ -119,7 +118,7 @@ const films = [
                 <input 
                     id="year" 
                     type="text"
-                    v-model="newFilmYear"
+                    v-model="newFilm.year"
                     >
             </div>
             <div class="form">
@@ -127,7 +126,7 @@ const films = [
                 <input 
                     id="genres" 
                     type="text"
-                    v-model="newFilmGenres"
+                    v-model="newFilm.genres"
                     >
             </div>
             <div class="film-synopsis">
@@ -135,7 +134,7 @@ const films = [
                 <textarea 
                 cols="30" rows="10" 
                 id="synopsis"
-                v-model="newFilmSynopsis"
+                v-model="newFilm.synopsis"
                 ></textarea>
             </div>
             <button class="submit-button" type="submit">Submit</button>
