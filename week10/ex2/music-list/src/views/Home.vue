@@ -13,3 +13,34 @@ console.log("Music list", MusicList);
     </div>
 
 </template>
+
+<style>
+.song-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.song-list-item {
+    width: auto;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background: white;
+}
+
+.song-list-item:hover {
+    background: black;
+
+}
+
+.song-list-item a {
+    color: black;
+}
+
+.song-list-item:hover a {
+    color: white;
+}
+</style>
