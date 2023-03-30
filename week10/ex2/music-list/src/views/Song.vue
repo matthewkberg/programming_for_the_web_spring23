@@ -25,6 +25,10 @@ const song = MusicList.find(song => {
 </template>
 
 <style>
+.song-detail {
+    max-width: 500px;
+    margin: 0 auto;
+}
 .song-detail h1, h2 {
     text-align: center;
 }
@@ -35,7 +39,9 @@ const song = MusicList.find(song => {
 }
 
 .song-detail p {
-    margin-left: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 125px;
 }
 
 .song-detail.rising {

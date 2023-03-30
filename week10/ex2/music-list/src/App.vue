@@ -17,6 +17,7 @@ import { RouterLink, RouterView } from 'vue-router'
 html {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 16px;
+  background: rgb(245, 196, 245);
 }
 
 .container {
