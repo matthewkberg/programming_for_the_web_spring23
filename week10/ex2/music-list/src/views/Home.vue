@@ -19,7 +19,7 @@ console.log("Music list", MusicList);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .song-list-item {

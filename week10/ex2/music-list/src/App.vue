@@ -7,9 +7,21 @@ import { RouterLink, RouterView } from 'vue-router'
   <nav>
     <RouterLink to="/">Home</RouterLink>
   </nav>
- <RouterView></RouterView>
+ <div class="container">
+  <RouterView></RouterView>
+ </div>
+
 </template>
 
 <style>
+html {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+}
 
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
 </style>
