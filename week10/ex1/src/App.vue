@@ -29,18 +29,27 @@ nav {
   width: 100%;
   height: 45px;
   background: rgb(15, 15, 79);
+  text-align: center;
 }
 
 nav a, nav a:hover, nav a:link, nav a:active, nav a:visited {
   color: #fff;
   font-weight: 900;
   font-size: 24px;
+  line-height: 1.75;
+  text-decoration: none;
+}
+
+nav a.router-link-active {
+  text-decoration: underline;
+  color: rgb(238, 238, 95);
 }
 
 .container {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
+    padding: 50px;
 }
 
 .container h1 {
@@ -48,9 +57,11 @@ nav a, nav a:hover, nav a:link, nav a:active, nav a:visited {
   font-size: 48px;
 }
 
-.container p {
+.container p, .container h3 {
   width: 800px;
   font-size: inherit;
+  margin-left: 100px;
+  
 }
 
 .container img {
