@@ -1,6 +1,6 @@
 [
     {
-        "poster": "https://m.media-amazon.com/images/M/MV5BNDg5NzgzNDM4Nl5BMl5BanBnXkFtZTcwNzY1MzY4Mw@@._V1_FMjpg_UY720_.jpg",
+        "poster": "marwencol-poster.jpeg",
         "title": "Marwencol",
         "year": 2010,
         "genres": "Documentary, Biography, Fantasy",
@@ -8,7 +8,7 @@
         "id": "1"
     },
     {
-        "poster": "https://m.media-amazon.com/images/M/MV5BNjY2MWI2YWYtOGUyZS00ZGZjLTkyYjAtYWYxZDJmMzlkZjE0XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_FMjpg_UX966_.jpg",
+        "poster": "strictly-ballroom-poster.jpg",
         "title": "Strictly Ballroom",
         "year": 1992,
         "genres": "Comedy, Drama, Romance",
@@ -16,7 +16,7 @@
         "id": "2"                
     },
     {
-        "poster": "https://m.media-amazon.com/images/M/MV5BNzQxMDQ1NjA4N15BMl5BanBnXkFtZTcwNTE5MjQ3OA@@._V1_FMjpg_UY720_.jpg",
+        "poster": "this-is-40-poster.jpg",
         "title": "This Is 40",
         "year": 2012,
         "genres": "Comedy, Drama, Romance",
@@ -24,7 +24,7 @@
         "id": "3"                
     },
     {
-        "poster": "https://m.media-amazon.com/images/M/MV5BMTk4NjM0MjI3MV5BMl5BanBnXkFtZTcwNjcxMDYzNg@@._V1_FMjpg_UY720_.jpg",
+        "poster": "melancholia-poster.jpg",
         "title": "Melancholia",
         "year": 2011,
         "genres": "Drama, Sci-Fi",
@@ -32,7 +32,7 @@
         "id": "4"                
     },
     {
-        "poster": "https://m.media-amazon.com/images/M/MV5BMTc1MTYwMzg1N15BMl5BanBnXkFtZTcwNzM0MDY4Ng@@._V1_FMjpg_UX671_.jpg",
+        "poster": "martha-marcy-may-marlene.jpg",
         "title": "Martha Marcy May Marlene",
         "year": 2011,
         "genres": "Drama, Mystery, Thriller",
