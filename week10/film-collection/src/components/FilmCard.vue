@@ -18,11 +18,11 @@ defineProps(["id", "name", "poster"])
     border: 1px solid rgb(22, 22, 56);
     border-radius: 5px;
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .film-img {
-    max-width: 200px;
+    max-height: 300px;
     display: block;
     width: 100%;
 }
@@ -31,9 +31,7 @@ defineProps(["id", "name", "poster"])
     text-align: center;
     border-top: 1px solid rgb(22, 22, 56);
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.footer-link {
-
-}
 </style>
