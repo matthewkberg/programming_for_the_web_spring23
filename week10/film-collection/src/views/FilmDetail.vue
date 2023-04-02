@@ -10,9 +10,12 @@ const filmDetails = filmData.find((film) => {
 </script>
 
 <template>
-    <div>
+    <div class="detail-container">
         <div>
             <h1 class="title">{{ filmDetails.title }}</h1>
+            <div>
+                <RouterLink to="/films">Back to Collection</RouterLink>
+            </div>
             <img 
             class="film-img" 
             :src="`/films/${filmDetails.poster}`" 
@@ -28,3 +31,15 @@ const filmDetails = filmData.find((film) => {
         </div>
     </div>
 </template>
+
+<style scoped>
+.detail-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 300px;
+    width: 100%;
+}
+</style>
