@@ -5,9 +5,9 @@ defineProps(["id", "name", "poster"])
 
 <template>
     <div class="film-card">
-        <img class="film-img" :src="`/films/${poster}`" :alt="title" />
+        <img class="film-img" :src="`./films/${poster}`" :alt="title" />
         <div class="footer">
-            <RouterLink class="footer-link" :to="`/films/${id}`">{{ name }}</RouterLink>
+            <RouterLink class="footer-link" :to="`./films/${id}`">{{ name }}</RouterLink>
         </div>
     </div>
 </template>

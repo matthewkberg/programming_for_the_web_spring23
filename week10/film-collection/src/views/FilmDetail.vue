@@ -18,7 +18,7 @@ const filmDetails = filmData.find((film) => {
             </div>
             <img 
             class="film-img" 
-            :src="`/films/${filmDetails.poster}`" 
+            :src="`./films/${filmDetails.poster}`" 
             :alt="filmDetails.title"/>
             <div>
                 <h3>Synopsis</h3>
