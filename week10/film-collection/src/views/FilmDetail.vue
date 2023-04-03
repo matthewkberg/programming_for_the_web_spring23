@@ -41,5 +41,14 @@ const filmDetails = filmData.find((film) => {
 img {
     max-width: 300px;
     width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+
+h3 {
+  font-family: 'Bungee', cursive;
+  color: #21265b;
 }
 </style>

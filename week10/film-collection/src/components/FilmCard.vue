@@ -15,10 +15,11 @@ defineProps(["id", "name", "poster"])
 <style scoped>
 .film-card {
     max-width: 200px;
-    border: 1px solid rgb(22, 22, 56);
+    border: 2px solid #962fbf;
     border-radius: 5px;
     margin-right: 10px;
     margin-bottom: 15px;
+    background-color: #d3b8a4;
 }
 
 .film-img {
