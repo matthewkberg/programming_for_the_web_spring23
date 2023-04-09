@@ -7,10 +7,10 @@ function setup() {
     pixelDensity(1);
     video = createCapture(VIDEO);
     video.size(320,240);
+    background(200);
 }
 
 function draw () {
-    background(200);
     video.loadPixels();
 
     var w = video.width;
@@ -28,5 +28,5 @@ function draw () {
          h // same height
          )
 
-        x = x + 1;
+        x = x + 1; // moves the copied pixels across the canvas
 }
