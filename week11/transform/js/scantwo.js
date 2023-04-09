@@ -2,7 +2,7 @@ var video;
 var y = 0;
 
 function setup() {
-    createCanvas(800, 240);
+    createCanvas(240, 480);
     pixelDensity(1);
     video = createCapture(VIDEO);
     video.size(320, 240);
@@ -15,7 +15,7 @@ function draw () {
     var w = video.width;
     var h = video.height;
 
-    copy(video, w/2, y/2, w, 1, 0, y, w, 1)
+    copy(video, w/2, y/2, 240, 1, 12, y, w, 1)
 
     y = y + 1;
 
