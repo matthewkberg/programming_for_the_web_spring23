@@ -29,4 +29,11 @@ function draw () {
          )
 
         x = x + 1; // moves the copied pixels across the canvas
+
+// sets x back to zero when it reaches end of canvas
+        if (x > width) { 
+            x = 0;
+        }
+
+
 }
