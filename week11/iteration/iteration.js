@@ -5,14 +5,17 @@ function setup () {
 }
 
 function makeBlob() {
-    noStroke();
-    fill(random(255), random(255), random(255));
-    quad(300, 600, 400, 600, 750, 800, 400, 800)
+    stroke(random(255), random(255), random(255));
+    strokeWeight(3);
+    noFill();
+    rect(300, 60, 400, 60);
 
 }
 
 function draw() {
     makeBlob();
+    translate(random(50), random(75));
+    rotate(random(360));
 
 }
 
