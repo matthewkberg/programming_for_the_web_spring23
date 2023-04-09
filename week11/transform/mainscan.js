@@ -1,5 +1,7 @@
 var video;
 
+var x = 0;
+
 function setup() {
     createCanvas(800, 240);
     pixelDensity(1);
@@ -21,8 +23,10 @@ function draw () {
          0, // top of video frame
          1, // how many pixels wide
          h, // how many pixels tall
-         0, 0, // where to copy to on the canvas
+         x, 0, // where to copy to on the canvas
          1, // how many pixels wide
          h // same height
          )
+
+        x = x + 1;
 }
