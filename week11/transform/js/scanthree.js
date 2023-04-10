@@ -26,13 +26,21 @@ function draw () {
         if (x > width) { 
             x = 0;
         }
+    
+    copy(video, w/2, y/2, 240, 1, 300, yb, w, 1)
+
+        yb = yb - 1;
+    
+        if (yb < 0) {
+            yb = 480;
+        }
 
     copy(video, w/2, 0, 1, h, xb, 240, 1, h)
 
         xb = xb - 1;
 
-        if (x > width) { 
-            x = 0;
+        if (xb < 0) { 
+            xb = 240;
         }
     
     copy(video, w/2, y/2, 240, 1, 100, y, w, 1)
