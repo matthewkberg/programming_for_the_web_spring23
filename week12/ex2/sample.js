@@ -41,9 +41,29 @@ function draw() {
     fill(253, 190, 209);
     noStroke();
     ellipse(400, 250, diam*6, diam*6);
+
+    fill(172, 183, 255);
+    noStroke();
+    ellipse(50, 350, diam*3, diam*3);
     
     fill(249, 207, 149);
     noStroke();
-    ellipse(width/2, height/2, diam, diam);
+    ellipse(275, 275, diam, diam);
+
+    fill(143, 177, 177);
+    noStroke();
+    ellipse(550, 300, diam*8, diam*8);
+
+    fill(249, 207, 149);
+    noStroke();
+    ellipse(150, 200, diam*5, diam*5);
+
+    fill(253, 190, 209);
+    noStroke();
+    ellipse(100, 50, diam*2, diam*2);
+
+    fill(172, 183, 255);
+    noStroke();
+    ellipse(500, 75, diam*8, diam*8);
 
 }
