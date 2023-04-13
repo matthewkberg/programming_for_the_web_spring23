@@ -4,7 +4,7 @@ var button;
 
 
 function setup() {
-    createCanvas(800, 600);
+    createCanvas(600, 400);
     song = loadSound("heart.mp3", loaded);
     button = createButton("play");
     button.mousePressed(togglePlaying);
@@ -12,7 +12,14 @@ function setup() {
 }
 
 function togglePlaying() {
-    song.play();
+    if (!song.isPlaying()) {
+        song.play();
+        button.html("pause")
+    } else {
+        song.pause();
+        button.html("play");
+    }
+
 }
 
 function loaded() {
