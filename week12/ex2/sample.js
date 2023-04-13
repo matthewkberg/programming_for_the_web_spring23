@@ -1,16 +1,15 @@
 var song;
 var slider;
 
-function preload() {
-    song = loadSound("heart.mp3");
-
-}
 
 function setup() {
     createCanvas(800, 600);
-    slider = createSlider(0, 1, 0.5, 0.01);
-    song.play();
+    song = loadSound("heart.mp3", loaded);
+    slider = createSlider(0, 1, 0.25, 0.01);
+}
 
+function loaded() {
+    song.play();
 }
 
 function draw() {
