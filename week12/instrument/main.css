@@ -1,0 +1,13 @@
+html {
+    text-align: center;
+    background-color: linear-gradient(#dde3f4, #ffd9cc, #392b44);
+}
+
+h1 {
+    font-family: 'Megrim', serif;
+    font-size: 3rem;
+}
+
+h2, p {
+    font-family: 'Oswald', sans-serif;
+}
