@@ -1,5 +1,6 @@
 html {
     text-align: center;
+    background-image: linear-gradient(#dde3f4, #ffd9cc, #dde3f4, #ffd9cc);
 }
 
 h1 {
@@ -9,4 +10,16 @@ h1 {
 
 h2, p {
     font-family: 'Oswald', sans-serif;
+}
+
+button {
+    font-family: 'Oswald';
+    font-size: 1.25rem;
+    font-weight: 400;
+    background-color: #a2add0;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    margin-bottom: 150px;
 }

@@ -130,7 +130,7 @@ function draw() {
     strokeWeight(5);
     line(100, 50, top*4, top*1.5);
 
-    fill(221, 227, 244);
+    fill(162, 173, 208);
     noStroke();
     ellipse(500, 150, diam*8, diam*12);
 
@@ -154,7 +154,7 @@ function draw() {
     strokeWeight(3);
     line(370, 245, top*6, top*3.4);
 
-    fill(221, 227, 244);
+    fill(162, 173, 208);
     noStroke();
     ellipse(100, 50, diam*3, diam*2.5);
 
