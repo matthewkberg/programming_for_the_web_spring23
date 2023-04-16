@@ -10,15 +10,35 @@ var slider;
 
 function setup() {
     createCanvas(800, 600);
-    ambient = loadSound("./sound/ambient01.mp3", loaded);
-    soundA = loadSound("./sound/bell01.mp3", loaded);
-    soundB = loadSound("./sound/bell02.mp3", loaded);
-    soundC = loadSound("./sound/bell03.mp3", loaded);
-    soundD = loadSound("./sound/bell04.mp3", loaded);
-    actA = loadSound("./sound/activate01.mp3", loaded);
-    actB = loadSound("./sound/activate02.mp3", loaded);
+    ambient = loadSound("./sound/ambient01.mp3");
+    soundA = loadSound("./sound/bell01.mp3");
+    soundB = loadSound("./sound/bell02.mp3");
+    soundC = loadSound("./sound/bell03.mp3");
+    soundD = loadSound("./sound/bell04.mp3");
+    actA = loadSound("./sound/activate01.mp3");
+    actB = loadSound("./sound/activate02.mp3");
     amp = new p5.Amplitude();
     
+    buttonA = createButton("Ambient");
+    buttonA.mousePressed(togglePlaying1);
+
+    buttonB = createButton("Activate 1");
+    buttonB.mousePressed(togglePlaying2);
+
+    buttonC = createButton("Activate 2");
+    buttonC.mousePressed(togglePlaying3);
+
+    buttonD = createButton("Bell 1");
+    buttonD.mousePressed(togglePlaying4);
+
+    buttonD = createButton("Bell 2");
+    buttonD.mousePressed(togglePlaying5);
+
+    buttonE = createButton("Bell 3");
+    buttonE.mousePressed(togglePlaying6);
+
+    buttonF = createButton("Bell 4");
+    buttonF.mousePressed(togglePlaying7);
 
 }
 
@@ -83,28 +103,4 @@ function togglePlaying7() {
     } else {
         soundD.pause();
     }
-}
-
-function loaded() {
-    buttonA = createButton("Ambient");
-    buttonA.mousePressed(togglePlaying1);
-
-    buttonB = createButton("Activate 1");
-    buttonB.mousePressed(togglePlaying2);
-
-    buttonC = createButton("Activate 2");
-    buttonC.mousePressed(togglePlaying3);
-
-    buttonD = createButton("Bell 1");
-    buttonD.mousePressed(togglePlaying4);
-
-    buttonD = createButton("Bell 2");
-    buttonD.mousePressed(togglePlaying5);
-
-    buttonE = createButton("Bell 3");
-    buttonE.mousePressed(togglePlaying6);
-
-    buttonF = createButton("Bell 4");
-    buttonF.mousePressed(togglePlaying7);
-
 }
