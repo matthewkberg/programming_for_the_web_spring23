@@ -111,22 +111,54 @@ function togglePlaying7() {
 function draw() {
     background(0);
     var vol = amp.getLevel();
-    var diam = map(vol, 0, 1, 10, 200);
+    var diam = map(vol, 0, 1, 15, 200);
     var top = map(vol, 0, 1, 100, 500);
 
     fill(204, 255, 242);
     noStroke();
     ellipse(400, 300, diam*4, diam*2);
 
+    stroke(105);
+    strokeWeight(10);
+    line(500, 300, top*2, top*4);
+
     fill(255, 217, 204);
     noStroke();
     ellipse(300, 400, diam*6, diam*3);
+
+    stroke(255);
+    strokeWeight(5);
+    line(100, 50, top*4, top*1.5);
 
     fill(221, 227, 244);
     noStroke();
     ellipse(500, 150, diam*8, diam*12);
 
+    stroke(35);
+    strokeWeight(20);
+    line(75, 300, top*3, top*2);
+
+    fill(204, 255, 242);
+    noStroke();
+    ellipse(75, 350, diam*5, diam*9);
+
+    stroke(50);
+    strokeWeight(15);
+    line(500, 300, top*2, top*4);
+
+    fill(255, 217, 204);
+    noStroke();
+    ellipse(600, 300, diam*8, diam*3.5);
+
     stroke(255);
-    strokeWeight(40);
-    line(200, 300, top*3, top*2);
+    strokeWeight(3);
+    line(370, 245, top*6, top*3.4);
+
+    fill(221, 227, 244);
+    noStroke();
+    ellipse(100, 50, diam*3, diam*2.5);
+
+    stroke(175);
+    strokeWeight(50);
+    line(50, 500, top*7, top*4);
 }
