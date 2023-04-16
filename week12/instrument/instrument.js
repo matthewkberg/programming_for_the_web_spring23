@@ -6,10 +6,13 @@ var soundD;
 var actA;
 var actB;
 var button;
-var slider;
+var vol;
+var diam;
+
 
 function setup() {
     createCanvas(800, 600);
+
     ambient = loadSound("./sound/ambient01.mp3");
     soundA = loadSound("./sound/bell01.mp3");
     soundB = loadSound("./sound/bell02.mp3");
@@ -103,4 +106,27 @@ function togglePlaying7() {
     } else {
         soundD.pause();
     }
+}
+
+function draw() {
+    background(0);
+    var vol = amp.getLevel();
+    var diam = map(vol, 0, 1, 10, 200);
+    var top = map(vol, 0, 1, 100, 500);
+
+    fill(204, 255, 242);
+    noStroke();
+    ellipse(400, 300, diam*4, diam*2);
+
+    fill(255, 217, 204);
+    noStroke();
+    ellipse(300, 400, diam*6, diam*3);
+
+    fill(221, 227, 244);
+    noStroke();
+    ellipse(500, 150, diam*8, diam*12);
+
+    stroke(255);
+    strokeWeight(40);
+    line(200, 300, top*3, top*2);
 }
