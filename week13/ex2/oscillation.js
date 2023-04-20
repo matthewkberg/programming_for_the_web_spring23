@@ -2,7 +2,7 @@ var pos; //position
 var inc; //increment
 
 function setup() {
-    createCanvas(windowHeight, windowWidth);
+    createCanvas(600, 600);
     angleMode(DEGREES);
 
     pos = 0.0; //float varible
