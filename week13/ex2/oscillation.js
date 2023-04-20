@@ -15,7 +15,9 @@ function draw() {
 
     var mySinVal = sin(pos); //sin function call of the position
 
-    ellipse(width/2, height/2, 100, 100);
+    amplified = mySinVal * 50;
+
+    ellipse(amplified + 150, height/2, 100, 100);
 
     pos = pos + inc //position equals position PLUS the increment value set
 
