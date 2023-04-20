@@ -23,6 +23,7 @@ function draw() {
     amplified = mySinVal * 50; //multiplied to increase the movement result
     amplified2 = mySinVal2 * 50;
 
+    fill(128, 128, 0);
     for (x = 0; x <= 360; x = x + 10) { //loop that starts at 0 and increases by 10
         curve(0, 10, 20, amplified2, amplified, 50, 60, 70);
         rotate(x);
