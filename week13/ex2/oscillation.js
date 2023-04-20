@@ -29,6 +29,12 @@ function draw() {
         rotate(x);
     }
 
+    fill(97, 64, 81);
+    for (x = 0; x <= 360; x = x + 5) { //loop that starts at 0 and increases by 5
+        curve(0, amplified2, 20, 80, amplified, 50, amplified2, amplified);
+        rotate(x);
+    }
+
     pos = pos + inc; //position equals position PLUS the increment value set
     pos2 = pos2 + inc2;
 
