@@ -30,7 +30,8 @@ function Drop() {
 
     this.fall = function() { // sets the rate the raindrop falls at
         this.speed = random(1, 15);
-        this.y = this.y + this.speed;
+        this.gravity = 1.05;
+        this.y = this.y + (this.speed + this.gravity);
 
         if(this.y > height) { // when drops leave the canvas, y resets to 0
             this.y = random(0, -height);
