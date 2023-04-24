@@ -2,7 +2,7 @@ var drop = [];
 
 function setup() {
     createCanvas(800, 600);
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 100; i++) { // loop to create new raindrops
         drop[i] = new Drop();
     }
 
@@ -11,7 +11,7 @@ function setup() {
 
 function draw() {
     background('#0a2136');
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 100; i++) { // loop to draw new raindrops across canvas
         drop[i].show();
         drop[i].fall();
     }
@@ -28,8 +28,12 @@ function Drop() {
         ellipse(this.x, this.y, 2, 10);
     }
 
-    this.fall = function() {
+    this.fall = function() { // sets the rate the raindrop falls at
         this.y = this.y + 1;
+
+        if(this.y > height) { // when drops leave the canvas, y resets to 0
+            this.y = 0;
+        }
 
     }
 }
