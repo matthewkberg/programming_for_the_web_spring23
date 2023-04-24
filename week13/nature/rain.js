@@ -19,13 +19,13 @@ function draw() {
     fill('#69453a');
     stroke('#69453a');
     strokeWeight(10);
-    line(width/2, 200, width/2, 425);
+    line(width/2, 200, width/2, 425); // umbrella handle
     noFill();
-    arc(width/2, 410, 50, 30, HALF_PI, PI);
+    arc(width/2, 410, 50, 30, HALF_PI, PI); // umbrella handle bottom
 
     noStroke();
     fill('#ffd700');
-    arc(width/2, height/2, 200, 150, PI, TWO_PI);
+    arc(width/2, height/2, 200, 150, PI, TWO_PI); // umbrella top
 }
 
 function Drop() {
