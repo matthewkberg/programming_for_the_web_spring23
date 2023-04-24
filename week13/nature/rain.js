@@ -2,7 +2,7 @@ var drop = [];
 
 function setup() {
     createCanvas(800, 600);
-    for (var i = 0; i < 100; i++) { // loop to create new raindrops
+    for (var i = 0; i < 500; i++) { // loop to create new raindrops
         drop[i] = new Drop();
     }
 
@@ -11,7 +11,7 @@ function setup() {
 
 function draw() {
     background('#0a2136');
-    for (var i = 0; i < 100; i++) { // loop to draw new raindrops across canvas
+    for (var i = 0; i < 500; i++) { // loop to draw new raindrops across canvas
         drop[i].show();
         drop[i].fall();
     }
