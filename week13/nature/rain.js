@@ -9,6 +9,7 @@ function setup() {
 function draw() {
     background('#0a2136');
     drop.show();
+    drop.fall();
     
 }
 
@@ -20,5 +21,10 @@ function Drop() {
         noStroke();
         fill(138, 43, 226);
         ellipse(this.x, this.y, 2, 10);
+    }
+
+    this.fall = function() {
+        this.y = this.y + 1;
+
     }
 }
