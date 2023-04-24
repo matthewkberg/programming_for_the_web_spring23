@@ -1,21 +1,26 @@
-var drop;
+var drop = [];
 
 function setup() {
     createCanvas(800, 600);
-    drop = new Drop();
+    for (var i = 0; i < 100; i++) {
+        drop[i] = new Drop();
+    }
+
 
 }
 
 function draw() {
     background('#0a2136');
-    drop.show();
-    drop.fall();
+    for (var i = 0; i < 100; i++) {
+        drop[i].show();
+        drop[i].fall();
+    }
     
 }
 
 function Drop() {
-    this.x = width/2;
-    this.y = 30;
+    this.x = random(0, width);
+    this.y = random(0, 10);
 
     this.show = function() {
         noStroke();
