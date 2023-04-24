@@ -16,6 +16,16 @@ function draw() {
         drop[i].fall();
     }
     
+    fill('#69453a');
+    stroke('#69453a');
+    strokeWeight(10);
+    line(width/2, 200, width/2, 425);
+    noFill();
+    arc(width/2, 410, 50, 30, HALF_PI, PI);
+
+    noStroke();
+    fill('#ffd700');
+    arc(width/2, height/2, 200, 150, PI, TWO_PI);
 }
 
 function Drop() {
