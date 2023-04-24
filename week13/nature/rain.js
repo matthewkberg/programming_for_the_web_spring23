@@ -20,7 +20,7 @@ function draw() {
 
 function Drop() {
     this.x = random(0, width);
-    this.y = random(0, 10);
+    this.y = random(0, -height);
 
     this.show = function() {
         noStroke();
@@ -32,7 +32,7 @@ function Drop() {
         this.y = this.y + 1;
 
         if(this.y > height) { // when drops leave the canvas, y resets to 0
-            this.y = 0;
+            this.y = random(0, -height);
         }
 
     }
