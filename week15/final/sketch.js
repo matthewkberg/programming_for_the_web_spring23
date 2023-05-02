@@ -3,6 +3,7 @@ var star = [];
 
 function setup() {
     createCanvas(800, 600);
+    // loop to create new stars
     for (var i = 0; i < 500; i++) {
         star[i] = new Star();
     }
@@ -10,6 +11,7 @@ function setup() {
 
 function draw() {
     background("#00007f");
+    // loop that draws new stars across the top half of the canvas
     for (var i = 0; i < 500; i++) {
         star[i].show();
     }
