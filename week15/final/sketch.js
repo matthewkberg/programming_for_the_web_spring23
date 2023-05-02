@@ -25,6 +25,6 @@ function Star() {
     this.show = function() {
         noStroke();
         fill("#ffd700");
-        ellipse(this.x, this.y, random(1, 2), random(1, 2));
+        ellipse(this.x, this.y, random(1, 2), random(1, 2)); // small random variance to width and height to create twinkle effect
     }
 }
