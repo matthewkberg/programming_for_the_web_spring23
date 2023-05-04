@@ -1,6 +1,7 @@
 var star = [];
 var song;
 var amp;
+var fft;
 var volhistory = [];
 
 
@@ -12,6 +13,7 @@ function setup() {
     };
     song = loadSound("./music/gaybar.mp3",loaded);
     amp = new p5.Amplitude();
+    fft = new p5.FFT(0, 1024);
 
 }
 
@@ -40,6 +42,10 @@ function draw() {
     
     var vol = amp.getLevel();
     volhistory.push(vol);
+
+    var spectrum = fft.analyze();
+    //console.log(spectrum);
+    
     fill(141, 255, 65, 55);
     noStroke();
     beginShape(QUAD_STRIP);
