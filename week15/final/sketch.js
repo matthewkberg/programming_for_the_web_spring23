@@ -40,7 +40,7 @@ function draw() {
     
     var vol = amp.getLevel();
     volhistory.push(vol);
-    fill(141, 255, 65, 55); // randomized transparency
+    fill(141, 255, 65, 55);
     noStroke();
     beginShape(QUAD_STRIP);
     for (var j = 0; j < volhistory.length; j++) {
