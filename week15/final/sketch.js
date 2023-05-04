@@ -40,7 +40,7 @@ function draw() {
     var vol = amp.getLevel();
     fill(141, 255, 65, 125);
     noStroke();
-    ellipse(width/2, height/2, 200, vol * 100);
+    ellipse(width/2, height/2, 200, vol * 300);
 
 }
 
