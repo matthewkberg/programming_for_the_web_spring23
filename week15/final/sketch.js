@@ -1,4 +1,5 @@
 var star = [];
+var song;
 
 
 function setup() {
@@ -6,7 +7,25 @@ function setup() {
     // loop to create new stars
     for (var i = 0; i < 500; i++) {
         star[i] = new Star();
+    };
+    song = loadSound("./music/gaybar.mp3",loaded);
+
+}
+
+function togglePlaying() {
+    if (!song.isPlaying()) {
+        song.play();
+        song.setVolume(0.25);
+        button.html("Pause")    
+    } else {
+        song.pause();
+        button.html("play");
     }
+}
+
+function loaded() {
+    button = createButton("play");
+    button.mousePressed(togglePlaying);
 }
 
 function draw() {
