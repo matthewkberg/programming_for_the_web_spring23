@@ -46,7 +46,19 @@ function draw() {
     var spectrum = fft.analyze();
     //console.log(spectrum);
     
-    fill(141, 255, 65, 55);
+    fill(157, 2, 215, 35);
+    noStroke();
+    beginShape(QUAD_STRIP);
+    for (var j = 0; j < volhistory.length; j++) {
+        var y = map(volhistory[j], 0, 1, 310, 0);
+        vertex(j, y);
+        vertex(j, y * .25);
+        vertex(j + 5, y);
+        vertex(j + 5, y * 1.75);
+    }
+    endShape();
+
+    fill(141, 255, 65, 45);
     noStroke();
     beginShape(QUAD_STRIP);
     for (var j = 0; j < volhistory.length; j++) {
