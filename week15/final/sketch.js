@@ -1,4 +1,5 @@
 var star = [];
+var tree = [];
 var song;
 var amp;
 var fft;
@@ -10,6 +11,8 @@ function setup() {
     // loop to create new stars
     for (var i = 0; i < 500; i++) {
         star[i] = new Star();
+        tree[i] = new Tree();
+
     };
     song = loadSound("./music/gaybar.mp3",loaded);
     amp = new p5.Amplitude();
@@ -50,7 +53,7 @@ function draw() {
     noStroke();
     beginShape(QUAD_STRIP);
     for (var j = 0; j < volhistory.length; j++) {
-        var y = map(volhistory[j], 0, 1, 310, 0);
+        var y = map(volhistory[j], 0, 1, 285, 0);
         vertex(j, y);
         vertex(j, y * .25);
         vertex(j + 5, y);
@@ -62,7 +65,7 @@ function draw() {
     noStroke();
     beginShape(QUAD_STRIP);
     for (var j = 0; j < volhistory.length; j++) {
-        var y = map(volhistory[j], 0, 1, 325, 0);
+        var y = map(volhistory[j], 0, 1, 310, 0);
         vertex(j + 5, y);
         vertex(j + 5, y * .25);
         vertex(j + 10, y);
@@ -74,16 +77,34 @@ function draw() {
         volhistory.splice(0, 1);
     }
 
+    for (var i = 0; i < 500; i++) {
+        tree[i].show();
+    };
+
 
 }
 
 function Star() {
     this.x = random(0, width);
-    this.y = random(0, height/2);
+    this.y = random(0, 500);
 
     this.show = function() {
         noStroke();
         fill("#ffd700");
         ellipse(this.x, this.y, random(1, 2), random(1, 2)); // small random variance to width and height to create twinkle effect
+    }
+}
+
+function Tree() {
+    this.x = random(-width, width);
+    this.y = random(475, height + 50);
+
+    this.show = function() {
+        stroke("#000E00");
+        fill("#001000");
+        triangle(this.x, this.y, this.x + 75 , this.y - 115 , this.x + 155, this.y);
+        stroke("#000E00");
+        fill("#001500");
+        triangle(this.x, this.y, this.x + 50 , this.y - 100 , this.x + 100, this.y)
     }
 }
