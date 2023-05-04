@@ -1,5 +1,6 @@
 var star = [];
 var song;
+var amp;
 
 
 function setup() {
@@ -9,13 +10,14 @@ function setup() {
         star[i] = new Star();
     };
     song = loadSound("./music/gaybar.mp3",loaded);
+    amp = new p5.Amplitude();
 
 }
 
 function togglePlaying() {
     if (!song.isPlaying()) {
         song.play();
-        song.setVolume(0.25);
+        song.setVolume(0.5);
         button.html("Pause")    
     } else {
         song.pause();
@@ -33,7 +35,10 @@ function draw() {
     // loop that draws new stars across the top half of the canvas
     for (var i = 0; i < 500; i++) {
         star[i].show();
-    }
+    };
+    
+    var vol = amp.getLevel();
+    ellipse(width/2, height/2, 200, vol * 100);
 
 }
 
