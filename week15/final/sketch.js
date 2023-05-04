@@ -1,6 +1,7 @@
 var star = [];
 var song;
 var amp;
+var volhistory = [];
 
 
 function setup() {
@@ -38,9 +39,21 @@ function draw() {
     };
     
     var vol = amp.getLevel();
-    fill(141, 255, 65, 125);
+    volhistory.push(vol);
+    fill(141, 255, 65, random(175, random(75, 255))); // randomized transparency
     noStroke();
-    ellipse(width/2, height/2, 200, vol * 300);
+    beginShape(QUAD_STRIP);
+    for (var j = 0; j < volhistory.length; j++) {
+        var y = map(volhistory[j], 0, 1, height/2, 0);
+        vertex(j, y);
+        vertex(j + 5, y);
+        vertex(j + 10, y);
+        vertex(j - 5, y);
+        vertex(j - 10, y);
+
+    }
+    endShape();
+
 
 }
 
