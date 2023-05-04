@@ -32,7 +32,7 @@ function loaded() {
 }
 
 function draw() {
-    background("#00007f");
+    background("#00002c");
     // loop that draws new stars across the top half of the canvas
     for (var i = 0; i < 500; i++) {
         star[i].show();
@@ -44,13 +44,11 @@ function draw() {
     noStroke();
     beginShape(QUAD_STRIP);
     for (var j = 0; j < volhistory.length; j++) {
-        var y = map(volhistory[j], 0, 1, height/2, 0);
+        var y = map(volhistory[j], 0, 1, 325, 0);
         vertex(j + 5, y);
         vertex(j + 5, y * .25);
         vertex(j + 10, y);
         vertex(j + 10, y * 1.5);
-
-
     }
     endShape();
 
