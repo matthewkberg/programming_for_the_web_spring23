@@ -51,13 +51,9 @@ function draw() {
 
     let waveform = fft.waveform();
     let colors = [
-        color(255, 215, 0, random(25, 75)),
-        color(255, 177, 78, random(25, 75)),
-        color(0, 50, 0, random(25, 75)),
-        color(22, 93, 11, random(25, 75)),
-        color(141, 255, 65, random(25, 75)),
-        color(157, 2, 215, random(25, 75)),
-        color(0, 0, 127, random(25, 75))
+        color(255, 177, 78, random(75, 95)),
+        color(0, 255, 255, random(75, 95)),
+        color(157, 2, 215, random(75, 95))
     ];
     noStroke();
     fill(colors[i % colors.length]);
@@ -65,7 +61,8 @@ function draw() {
     for (let i = 0; i < waveform.length; i++){
         let x = map(i, 0, waveform.length, 0, width);
         let y = map( waveform[i], -1, 1, 0, height);
-        vertex(x,y);
+        vertex(x,y - 50);
+        vertex(x,y - 5);
         }
     endShape();
     
