@@ -78,7 +78,7 @@ function draw() {
     }
     endShape();
 
-    fill(141, 255, 65, 45);
+    fill(141, 255, 65, 55);
     noStroke();
     beginShape(QUAD_STRIP);
     for (var j = 0; j < volhistory.length; j++) {
@@ -95,7 +95,7 @@ function draw() {
     }
 
     noStroke();
-    fill(colors[i % colors.length]);
+    fill(colors[i % colors.length - 1]);
     beginShape();
     for (let i = 0; i < waveform.length; i++){
         let x = map(i, 0, waveform.length, 0, width);
