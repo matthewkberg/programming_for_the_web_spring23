@@ -1,5 +1,6 @@
 var star = [];
 var tree = [];
+var streak = [];
 var song;
 var amp;
 var fft;
@@ -12,6 +13,7 @@ function setup() {
     for (var i = 0; i < 500; i++) {
         star[i] = new Star();
         tree[i] = new Tree();
+        streak[i] = new northStreak();
 
     };
     song = loadSound("./music/gaybar.mp3",loaded);
@@ -46,9 +48,13 @@ function draw() {
     var vol = amp.getLevel();
     volhistory.push(vol);
 
-    var spectrum = fft.analyze();
+    //var spectrum = fft.analyze();
     //console.log(spectrum);
     
+    for (var i = 0; i < 300; i++) {
+        streak[i].show();
+    };
+
     fill(157, 2, 215, 35);
     noStroke();
     beginShape(QUAD_STRIP);
@@ -106,5 +112,36 @@ function Tree() {
         stroke("#000E00");
         fill("#001500");
         triangle(this.x, this.y, this.x + 50 , this.y - 100 , this.x + 100, this.y)
+    }
+}
+
+function northStreak() {
+    this.x = random(0, width);
+    this.y = random(200, 500);
+
+    this.show = function() {
+        noStroke();
+        let colors = [
+            color(255, 215, 0, random(25, 75)),
+            color(255, 177, 78, random(25, 75)),
+            color(0, 50, 0, random(25, 75)),
+            color(22, 93, 11, random(25, 75)),
+            color(141, 255, 65, random(25, 75)),
+            color(157, 2, 215, random(25, 75)),
+            color(0, 0, 127, random(25, 75))
+        ]
+        for (let i = 0; i < 300; i++) {
+            let waveform = fft.waveform();
+            fill(colors[i % colors.length]);
+            beginShape();
+            for (let i = 0; i < waveform.length; i++){
+                let x = map(i, 0, waveform.length, 0, width);
+                let y = map( waveform[i], -1, 1, 0, height);
+                vertex(x,y);
+            }
+            endShape();
+
+        }
+
     }
 }
