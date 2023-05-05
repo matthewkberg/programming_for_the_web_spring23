@@ -46,8 +46,6 @@ function draw() {
     var vol = amp.getLevel();
     volhistory.push(vol);
 
-    //var spectrum = fft.analyze();
-    //console.log(spectrum);
 
     let waveform = fft.waveform();
     let colors = [
@@ -55,17 +53,42 @@ function draw() {
         color(0, 255, 255, random(75, 95)),
         color(157, 2, 215, random(75, 95))
     ];
+
+    // first waveform segment - purple/magenta
     noStroke();
-    fill(colors[i % colors.length]);
+    fill(colors[i % colors.length]); // loop through colors
     beginShape();
-    for (let i = 0; i < waveform.length; i++){
+    for (let i = 0; i < 300; i++){
         let x = map(i, 0, waveform.length, 0, width);
         let y = map( waveform[i], -1, 1, 0, height);
         vertex(x,y - 50);
         vertex(x,y - 5);
         }
     endShape();
+
+    // second waveform segment - orange
+    fill(colors[i % colors.length - 2]);
+    beginShape();
+    for (let i = 300; i < 600; i++){
+        let x = map(i, 0, waveform.length, 0, width);
+        let y = map( waveform[i], -1, 1, 0, height);
+        vertex(x,y - 50);
+        vertex(x,y - 5);
+        }
+    endShape();
+
+    // third waveform segment - purple/magenta
+    fill(colors[i % colors.length]);
+    beginShape();
+    for (let i = 600; i < waveform.length; i++){
+        let x = map(i, 0, waveform.length, 0, width);
+        let y = map( waveform[i], -1, 1, 0, height);
+        vertex(x,y - 5);
+        vertex(x,y - 75);
+        }
+    endShape();
     
+    // first quad strip, purple/magenta color
     fill(157, 2, 215, 35);
     noStroke();
     beginShape(QUAD_STRIP);
@@ -78,6 +101,7 @@ function draw() {
     }
     endShape();
 
+    // second quad strip, neon green
     fill(141, 255, 65, 55);
     noStroke();
     beginShape(QUAD_STRIP);
@@ -94,6 +118,7 @@ function draw() {
         volhistory.splice(0, 1);
     }
 
+    // aqua waveform
     noStroke();
     fill(colors[i % colors.length - 1]);
     beginShape();
@@ -105,6 +130,7 @@ function draw() {
         }
     endShape();
 
+    // loop that draws the tree tops along the bottom third of the canvas
     for (var i = 0; i < 500; i++) {
         tree[i].show();
     };
